@@ -756,7 +756,7 @@ console.log(column);
 //										  }
 		        });
 		    }
-console.log(bars);
+		// console.log(bars);
 
 		//y domain calculations	: zero to intelligent max choice, or intelligent min and max choice,  or interval chosen manually
 	   		if (dvc.essential.xAxisScale == "auto_zero_max"){
@@ -1737,8 +1737,7 @@ names.forEach(function(d,i){
 												var exportGS = exServ.filter(function(dat) {// console.log(dat);
 													return dat.name == countryID;
 												});
-												console.log(importGS[0], exportGS[0]);
-						
+											
 									// Adds top services PUT SOMEWHERE ELSE
 									if(importGS[0].amt != "null") {
 												 d3.selectAll("#topservice"+i)
@@ -1765,25 +1764,37 @@ names.forEach(function(d,i){
 			// Add rank ??
 			if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) { //console.log(i, d);
 				
-				d3.select("#chartBox"+i).selectAll(".rankText")/*.selectAll("text")*/.remove();
+				var impRank = bars[d + "import"];  //console.log(d, impServ);
+					var imrankGS = impRank.filter(function(dat) {// console.log(dat);
+						return dat.name == countryID;
+					});
+
+				var exRank = bars[d + "export"];  //console.log(sectionData1);
+					var exrankGS = exRank.filter(function(dat) {// console.log(dat);
+						return dat.name == countryID;
+					});
+					
+					console.log(imrankGS[0].rank, exrankGS[0].rank);
+						
+					d3.select("#chartBox"+i).selectAll(".rankText")/*.selectAll("text")*/.remove();
 				
 					d3.select("#chartBox"+i).append("text")
 									.attr('id', "rankImport")
 									.attr('class', 'rankText')
-									.attr('x', x2(-80000))
+									.attr('x', x2(-75000))
 									.attr('y', 30)
 									.attr("text-anchor", "start")
 									//.text(function(){ return "Rank #" + idData2[0].rank; });
-									.text(function(){ return "Rank#" + importGS[0].rank });
+									.text(function(){ return "iRank#" + imrankGS[0].rank });
 									
 					d3.select("#chartBox"+i).append("text")
 									.attr('id', "rankExport")
 									.attr('class', 'rankText')
-									.attr('x', x2(110000))
+									.attr('x', x2(100000))
 									.attr('y', 30)
-									.attr("text-anchor", "end")
+									.attr("text-anchor", "start")
 									//.text(function(){ return "Rank #" + idData2[0].rank; });
-									.text(function(){ return "Rank#" + exportGS[0].rank });
+									.text(function(){ return "eRank#" + exrankGS[0].rank });
 										
 			}
 											
