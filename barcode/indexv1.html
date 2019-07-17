@@ -246,7 +246,7 @@
 								}
 								.tdamt{
 									font-weight: 600;
-									text-align:right;
+									float:right;
 								}
 
 									.imexFigure,.rankVal{
@@ -1132,12 +1132,9 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 								Checkatrade/*.append('p')*/
 										.append('text')
 										.attr('class', "tdamt")
-										.text("")
-										.append('span')
-										.append('text')
 										.style("font-weight", 400)
-										.attr("text-align", "right")
-										.text("Imported");
+										.style("float", "right")
+										.html("Imported");
 
 										//d3.select("#tradedeficit").select(".tdamt").select('text').remove();
 
@@ -1150,10 +1147,9 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 
 								Checkatrade2/*.append('p')*/
 										.append('text')
-										.text('Exported')
-										.append('span')
-										.attr('class', "tsamt")
-										.append('text');
+                    .style("font-weight", 400)
+                    .attr('class', "tsamt")
+										.html('Exported');
 
 
 		// add the bar chart container
@@ -1707,17 +1703,12 @@ names.forEach(function(d,i){
 				//console.log(i,d, idData1[i].amt, idData2[i].amt);
 
 							d3.select("#tradedeficit"+i).select(".tdamt")
-										.text(function(){ return "£"+ d3.format(dvc.essential.dataFormats)(idData1[0].amt) +"m "; })
-										.append('span')
-										.append('text')
+										.html(function(){ return "Imported <span style='font-weight:bold'>£"+ d3.format(dvc.essential.dataFormats)(idData1[0].amt) +"m</span>"; })
 										.style("font-weight", 400)
-										.attr("text-align", "right")
-										.text("Imported");
+										.style("float", "right");
 
 							d3.select("#tradesurplus"+i).select(".tsamt")
-										//.text(function(){ return "Rank #" + idData2[0].rank; });
-										.text(function(){ return " £"+ d3.format(dvc.essential.dataFormats)(idData2[0].amt) +"m"; });
-
+                    .html(function(){ return "Exported <span style='font-weight:bold'>£"+ d3.format(dvc.essential.dataFormats)(idData2[0].amt) +"m</span>"; })
 
 
 	if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
