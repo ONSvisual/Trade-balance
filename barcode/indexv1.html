@@ -735,7 +735,7 @@ function drawGraphic(names){
 		  dual = 0;
           lastamt = 0;
 		        if (column == 'AREACD') continue;
-console.log(column);
+
 		        bars[column] = bar_data.sort(function(a,b){return +b[column]- +a[column]}).map(function(d) {
 
               if(+d[column] < lastamt) {
@@ -1830,7 +1830,7 @@ names.forEach(function(d,i){
                       }
 		if(countryNM == "United States inc Puerto Rico" || countryNM == "United States of America") countryNM = "US inc Puerto Rico";
 
-        return '<p>The UK has a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Total"])) + tradeDefSurp +' with ' + countryNM + ', which means ' + weDefSur + '.</p> <p>We have a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Goods"])) + tradeDefSurpGoods + offset + ' a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Services"])) + weDefSurServ + ' in Services.</p>';
+        return '<p>The UK has a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Total"])) + tradeDefSurp +' with ' + countryNM + ', which means ' + weDefSur + '.</p> <p>We have a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Goods"])) + tradeDefSurpGoods + offset + ' a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Services"])) + ' million' + weDefSurServ + ' in Services.</p>';
               });
 
 
