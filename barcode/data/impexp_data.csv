@@ -1,0 +1,235 @@
+AREACD,Totalexport,Totalimport,Goodsexport,Goodsimport,Servicesexport,Servicesimport,topServicesimported,topServicesexported,topGoodsimported,topGoodsexported
+AD,75,31,5,0,70,31,null,null,null,Beverages
+AE,11358,6188,7642,4187,3716,2001,null,null,Mechanical power generators (intermediate),Mechanical power generators (intermediate)
+AF,323,249,11,0,312,249,null,null,Mechanical power generators (intermediate),Electric motors (capital)
+AG,10,7,4,7,6,0,null,null,Iron & steel,null
+AI,4,0,0,0,4,0,null,null,null,null
+AL,13,5,4,0,9,5,"Telecommunications, computer & information services",Intellectual property,null,Textile fibres
+AM,101,14,1,0,100,14,null,null,null,Telecoms & sound equipment (capital)
+AO,778,322,376,124,402,198,null,null,Crude oil,General industrial machinery (intermediate)
+AQ,0,0,0,0,0,0,null,null,null,null
+AR,691,879,309,694,382,185,Travel,Travel,Animal feeding stuffs,Medicinal & pharmaceutical products
+AS,3,0,0,0,3,0,null,null,null,null
+AT,3028,4598,1766,3262,1262,1336,Travel,Financial,Other manufactures (consumer),Cars
+AU,10344,5186,4976,2241,5368,2945,Travel,Travel,Non-ferrous metals,Medicinal & pharmaceutical products
+AW,34,0,34,0,0,0,null,null,Refined oil,Beverages
+AZ,490,204,199,94,291,110,null,null,Crude oil,Jewellery
+BA,95,39,2,1,93,38,null,null,null,Inorganic chemicals
+BB,94,275,9,0,85,275,null,null,Sugar,Cars
+BD,552,2929,191,2751,361,178,null,null,Clothing,Electric motors (capital)
+BE,18687,27774,14032,25435,4655,2339,Other Business Services,Other Business Services,Cars,Mineral manufactures
+BF,22,19,3,4,19,15,null,null,null,Dairy products & eggs
+BG,806,917,333,389,473,528,Travel,Transportation,Clothing,Beverages
+BH,679,265,439,239,240,26,null,null,Refined oil,Mechanical power generators (intermediate)
+BI,1,0,1,0,0,0,null,null,null,Scientific instruments (capital)
+BJ,17,0,12,0,5,0,null,null,null,Textile fibres
+BM,1158,2049,108,1,1050,2048,null,null,null,Other manufactures (intermediate)
+BN,206,15,46,10,160,5,null,null,Plastics in non-primary forms,Jewellery
+BO,29,17,11,14,18,3,null,null,Vegetables & fruit,Beverages
+BQ,0,0,0,0,0,0,null,null,null,Ships
+BR,3177,2376,1941,1771,1236,605,Other Business Services,Travel,Metal ores & scrap,Medicinal & pharmaceutical products
+BS,152,218,11,4,141,214,null,null,Office machinery (capital),Refined oil
+BT,4,3,0,0,4,3,null,null,null,null
+BV,0,0,0,0,0,0,null,null,null,null
+BW,349,28,24,20,325,8,null,null,Mineral manufactures,Mineral manufactures
+BY,112,43,110,42,2,1,Manufacturing,Other Business Services,Refined oil,Mechanical power generators (intermediate)
+BZ,23,53,13,52,10,1,null,null,Vegetables & fruit,Refined oil
+CA,9668,7278,5403,5424,4265,1854,Travel,Other Business Services,Mineral manufactures,Mechanical power generators (intermediate)
+CC,0,0,0,0,0,0,null,null,null,null
+CD,77,18,11,0,66,18,null,null,null,Road vehicles other than cars (capital)
+CF,0,0,0,0,0,0,null,null,null,null
+CG,258,55,45,12,213,43,null,null,Crude oil,Specialised machinery (intermediate)
+CH,20187,11887,7501,7880,12686,4007,Other Business Services,Other Business Services,Medicinal & pharmaceutical products,Works of art
+CI,265,297,92,267,173,30,null,null,Crude oil,Dairy products & eggs
+CK,2,0,0,0,2,0,null,null,null,null
+CL,942,842,571,718,371,124,Travel,Transportation,Vegetables & fruit,Crude oil
+CM,110,59,16,53,94,6,null,null,Crude oil,Specialised machinery (intermediate)
+CN,22464,44838,17958,43377,4506,1461,Travel,Travel,Clothing,Cars
+CO,897,625,459,472,438,153,Travel,Other Business Services,"Coal, coke & briquettes",Medicinal & pharmaceutical products
+CR,60,316,42,244,18,72,null,null,Vegetables & fruit,Cars
+CU,53,362,20,8,33,354,null,null,Refined oil,Iron & steel
+CV,0,0,0,0,0,0,null,null,null,Mechanical power generators (intermediate)
+CW,123,8,6,0,117,8,null,null,null,null
+CX,0,0,0,0,0,0,null,null,null,null
+CY,1083,1255,267,113,816,1142,Travel,Other Business Services,Refined oil,Telecoms & sound equipment (capital)
+CZ,3168,6265,2020,5601,1148,664,Travel,Travel,Office machinery (capital),Miscellaneous electrical goods (intermediate)
+DE,56195,77886,37182,68845,19013,9041,Other Business Services,Financial,Cars,Crude oil
+DJ,10,14,6,14,4,0,null,null,null,Mechanical power generators (intermediate)
+DK,6532,6263,2644,4867,3888,1396,Other Business Services,Other Business Services,Crude oil,Refined oil
+DM,3,0,3,0,0,0,null,null,null,null
+DO,79,131,69,121,10,10,null,null,Vegetables & fruit,Beverages
+DZ,414,1546,316,1393,98,153,null,null,Crude oil,Iron & steel
+EC,107,227,79,162,28,65,null,null,Fish & shellfish,Refined oil
+EE,221,224,133,196,88,28,Travel,Travel,Refined oil,Beverages
+EG,1998,1040,1278,622,720,418,Other Business Services,Other Business Services,Miscellaneous electrical goods (intermediate),Metal ores & scrap
+ER,2,0,0,0,2,0,null,null,null,Road vehicles other than cars (capital)
+ES,17425,30538,10349,16417,7076,14121,Travel,Financial,Medicinal & pharmaceutical products,Medicinal & pharmaceutical products
+ET,303,412,222,350,81,62,null,null,Mechanical power generators (intermediate),Mechanical power generators (intermediate)
+FI,2638,2930,1259,2454,1379,476,Travel,Financial,Paper & paperboard,Cars
+FJ,67,28,4,27,63,1,null,null,Sugar,null
+FK,29,6,18,2,11,4,null,null,Specialised machinery (intermediate),Miscellaneous metal manufactures
+FM,1,0,0,0,1,0,null,null,null,null
+FO,6,230,3,229,3,1,null,null,Fish & shellfish,Processed oils & fats
+FR,41534,39950,24214,27408,17320,12542,Travel,Financial,Beverages,Refined oil
+GA,92,31,35,26,57,5,null,null,Specialised machinery (intermediate),Scientific instruments (capital)
+GD,4,79,1,0,3,79,null,null,null,null
+GE,91,70,71,23,20,47,null,null,Refined oil,Cars
+GH,685,484,378,198,307,286,null,null,"Coffee, tea, cocoa etc",Refined oil
+GI,3213,1406,358,16,2855,1390,null,null,Ships,Refined oil
+GL,0,2,0,2,0,0,null,null,Specialised machinery (intermediate),null
+GM,10,22,4,3,6,19,null,null,Vegetables & fruit,Refined oil
+GN,47,0,12,0,35,0,null,null,Scientific instruments (intermediate),Refined oil
+GQ,50,62,9,58,41,4,null,null,Crude oil,General industrial machinery (intermediate)
+GR,2335,3693,880,795,1455,2898,Travel,Transportation,Vegetables & fruit,Medicinal & pharmaceutical products
+GS,0,0,0,0,0,0,null,null,null,null
+GT,28,100,18,95,10,5,null,null,Vegetables & fruit,Cars
+GU,70,0,0,0,70,0,null,null,null,null
+GW,0,0,0,0,0,0,null,null,null,null
+GY,149,71,12,56,137,15,null,null,Sugar,Road vehicles other than cars (capital)
+HK,11042,10018,7908,7719,3134,2299,Financial,Other Business Services,Telecoms & sound equipment (capital),Mechanical power generators (intermediate)
+HM,0,0,0,0,0,0,null,null,null,null
+HN,7,130,2,130,5,0,null,null,"Coffee, tea, cocoa etc",Electric motors (capital)
+HR,299,556,98,76,201,480,Travel,Transportation,Miscellaneous electrical goods (intermediate),Refined oil
+HT,12,6,12,6,0,0,null,null,Clothing,Other manufactures (intermediate)
+HU,2133,3463,1343,2703,790,760,Travel,Travel,Telecoms & sound equipment (capital),Medicinal & pharmaceutical products
+ID,1247,1360,798,1100,449,260,Travel,Other Business Services,Clothing,Cars
+IE,35843,21772,20429,14476,15414,7296,Other Business Services,Other Business Services,Organic chemicals,Refined oil
+IL,2278,1639,1237,1056,1041,583,Other Business Services,Travel,Medicinal & pharmaceutical products,Mineral manufactures
+IN,6739,10774,4462,7672,2277,3102,Other Business Services,Travel,Clothing,Unspecified goods
+IO,0,0,0,0,0,0,null,null,null,null
+IQ,547,27,301,4,246,23,null,null,null,Medicinal & pharmaceutical products
+IR,420,103,207,13,213,90,Travel,Travel,Crude oil,Miscellaneous electrical goods (capital)
+IS,676,1170,334,522,342,648,Travel,Other Business Services,Fish & shellfish,Refined oil
+IT,19697,23798,10360,18496,9337,5302,Travel,Travel,Medicinal & pharmaceutical products,Medicinal & pharmaceutical products
+JE,5548,4054,0,0,5548,4054,null,null,null,null
+JM,77,469,48,45,29,424,null,null,Vegetables & fruit,Other manufactures (intermediate)
+JO,490,219,301,189,189,30,null,null,Metal ores & scrap,Medicinal & pharmaceutical products
+JP,13598,14372,6373,9401,7225,4971,Financial,Financial,Mechanical power generators (intermediate),Medicinal & pharmaceutical products
+KE,588,697,286,461,302,236,null,null,"Coffee, tea, cocoa etc",Road vehicles other than cars (capital)
+KG,17,7,3,0,14,7,null,null,null,Refined oil
+KH,52,921,28,913,24,8,null,null,Clothing,Works of art
+KI,0,0,0,0,0,0,null,null,null,null
+KM,0,0,0,0,0,0,null,null,Telecoms & sound equipment (capital),null
+KN,7,0,2,0,5,0,null,null,null,Other manufactures (intermediate)
+KP,13,27,0,0,13,27,null,null,null,null
+KR,8201,5143,6306,4564,1895,579,Financial,Travel,Cars,Crude oil
+KW,2439,1157,597,1131,1842,26,null,null,Refined oil,Cars
+KY,2011,233,29,0,1982,233,null,null,Ships,Works of art
+KZ,1310,608,199,414,1111,194,null,null,Non-ferrous metals,Jewellery
+LA,9,19,5,12,4,7,null,null,Sugar,null
+LB,470,108,303,6,167,102,null,null,Iron & steel,Mechanical power generators (capital)
+LC,35,163,3,8,32,155,null,null,Vegetables & fruit,Miscellaneous electrical goods (capital)
+LI,87,68,11,1,76,67,"Personal, Cultural & Recreational",Other Business Services,null,Ships
+LK,295,940,136,702,159,238,null,null,Clothing,Mechanical power generators (intermediate)
+LR,25,0,5,0,20,0,null,null,null,General industrial machinery (capital)
+LS,2,0,0,0,2,0,null,null,null,null
+LT,659,913,462,674,197,239,Travel,Travel,Refined oil,Organic chemicals
+LU,3520,2908,186,337,3334,2571,"Telecommunications, computer & information services",Financial,Telecoms & sound equipment (capital),Rubber manufactures
+LV,361,705,246,554,115,151,Travel,Travel,Wood & cork,Beverages
+LY,264,881,177,861,87,20,null,null,Crude oil,Medicinal & pharmaceutical products
+MA,1184,1245,771,676,413,569,Travel,Transportation,Clothing,Gas
+MD,93,410,34,45,59,365,null,null,Clothing,Textile fabrics
+ME,6,19,6,16,0,3,Travel,Manufacturing,null,Ships
+MG,33,62,19,30,14,32,null,null,Clothing,Other chemicals
+MH,373,31,1,0,372,31,null,null,Ships,null
+MK,1379,704,839,35,540,669,null,null,Clothing,Non-ferrous metals
+ML,59,0,32,0,27,0,null,null,null,Dairy products & eggs
+MM,136,246,18,215,118,31,null,null,Clothing,General industrial machinery (intermediate)
+MN,41,6,17,1,24,5,null,null,Textile fibres,Specialised machinery (intermediate)
+MO,147,65,40,1,107,64,null,null,Pulp & waste paper,Telecoms & sound equipment (capital)
+MP,3,0,1,0,2,0,null,null,null,null
+MR,29,3,4,2,25,1,null,null,null,Refined oil
+MS,1,0,1,0,0,0,null,null,null,null
+MT,1003,835,402,110,601,725,Travel,Insurance & Pension,Medicinal & pharmaceutical products,Ships
+MU,283,665,40,162,243,503,null,null,Clothing,Cars
+MV,15,119,3,10,12,109,null,null,Fish & shellfish,null
+MW,32,43,3,10,29,33,null,null,Tobacco,Road vehicles other than cars (capital)
+MX,2243,2044,1691,1187,552,857,Travel,Other Business Services,Mechanical power generators (intermediate),Medicinal & pharmaceutical products
+MY,2328,3265,1465,1821,863,1444,Travel,Travel,Telecoms & sound equipment (capital),Cars
+MZ,103,92,11,78,92,14,null,null,Non-ferrous metals,Road vehicles other than cars (capital)
+NA,87,118,39,33,48,85,null,null,Mineral manufactures,Mineral manufactures
+NC,28,10,4,8,24,2,null,null,null,Road vehicles other than cars (capital)
+NE,24,5,5,1,19,4,null,null,null,null
+NF,0,0,0,0,0,0,null,null,null,null
+NG,2343,1610,1284,1315,1059,295,null,null,Crude oil,Refined oil
+NI,11,46,2,46,9,0,null,null,Oil-seeds & oleaginous fruits,Specialised machinery (intermediate)
+NL,39319,46253,22032,40482,17287,5771,Other Business Services,Other Business Services,Refined oil,Crude oil
+NO,6521,21140,3223,19560,3298,1580,Other Business Services,Other Business Services,Crude oil,General industrial machinery (intermediate)
+NP,59,68,1,11,58,57,null,null,Clothing,Specialised machinery (capital)
+NR,0,0,0,0,0,0,null,null,null,null
+NU,2,0,2,0,0,0,null,null,null,null
+NZ,1418,1221,827,814,591,407,Travel,Travel,Meat & meat preparations,Cars
+OM,2158,317,1932,262,226,55,null,null,Plastics in non-primary forms,Jewellery
+PA,188,50,118,25,70,25,null,null,Vegetables & fruit,Beverages
+PE,211,516,135,340,76,176,null,null,Vegetables & fruit,Beverages
+PF,117,0,2,0,115,0,null,null,null,null
+PG,154,120,17,117,137,3,null,null,Vegetable oils & fats,Miscellaneous metal manufactures
+PH,677,888,504,467,173,421,Travel,Other Business Services,Miscellaneous electrical goods (intermediate),Miscellaneous electrical goods (intermediate)
+PK,1134,1789,669,1215,465,574,Travel,Travel,Clothing,Metal ores & scrap
+PL,7098,12820,4984,10459,2114,2361,Travel,Travel,Non-ferrous metals,Medicinal & pharmaceutical products
+PN,0,0,0,0,0,0,null,null,null,null
+PS,15,2,3,0,12,2,null,null,null,Medicinal & pharmaceutical products
+PT,2874,5771,1429,2972,1445,2799,Travel,Transportation,Clothing,Gas
+PW,1,0,0,0,1,0,null,null,null,null
+PY,25,6,21,5,4,1,null,null,null,Beverages
+QA,3455,2861,2557,2687,898,174,null,null,Gas,Jewellery
+RO,1965,2690,1138,1906,827,784,Travel,Travel,Clothing,Textile fabrics
+RS,180,247,82,204,98,43,Travel,Travel,Rubber manufactures,Specialised machinery (capital)
+RU,6007,6488,3117,5786,2890,702,Financial,Financial,Crude oil,Cars
+RW,16,6,3,1,13,5,null,null,null,Textile fabrics
+SA,6146,2929,4216,2407,1930,522,Travel,Travel,Refined oil,Medicinal & pharmaceutical products
+SB,56,2,0,0,56,2,null,null,null,null
+SC,20,71,6,63,14,8,null,null,Fish & shellfish,Ships
+SD,73,25,64,8,9,17,null,null,Other crude animal & vegetable materials,Refined oil
+SE,10518,9357,5271,7005,5247,2352,Other Business Services,Other Business Services,Refined oil,Crude oil
+SG,8387,5132,5270,3222,3117,1910,Other Business Services,Other Business Services,Organic chemicals,Mechanical power generators (intermediate)
+SH,9,0,5,0,4,0,null,null,null,Refined oil
+SI,323,448,155,327,168,121,Travel,Travel,Miscellaneous electrical goods (intermediate),Other manufactures (consumer)
+SK,847,2641,467,2448,380,193,Travel,Travel,Cars,Non-ferrous metals
+SL,43,31,7,6,36,25,null,null,Metal ores & scrap,Road vehicles other than cars (intermediate)
+SM,2,0,0,0,2,0,null,null,null,null
+SN,340,72,217,29,123,43,null,null,Vegetables & fruit,Refined oil
+SO,36,0,2,0,34,0,null,null,null,Road vehicles other than cars (capital)
+SR,11,0,7,0,4,0,null,null,null,Beverages
+SS,39,0,0,0,39,0,null,null,null,null
+ST,3,0,3,0,0,0,null,null,null,null
+SV,18,9,13,8,5,1,null,null,"Coffee, tea, cocoa etc",Miscellaneous electrical goods (intermediate)
+SX,7,1,2,0,5,1,null,null,null,null
+SY,9,5,3,5,6,0,null,null,Textile fibres,Medicinal & pharmaceutical products
+SZ,6,23,0,2,6,21,null,null,Vegetables & fruit,null
+TC,3,0,0,0,3,0,null,null,null,null
+TD,21,6,3,0,18,6,null,null,null,Scientific instruments (capital)
+TF,0,0,0,0,0,0,null,null,null,null
+TG,195,5,30,0,165,5,null,null,null,Refined oil
+TH,1789,4258,1299,3059,490,1199,Travel,Travel,Meat & meat preparations,Iron & steel
+TJ,17,4,0,0,17,4,null,null,null,null
+TK,0,0,0,0,0,0,null,null,null,null
+TL,3,0,0,0,3,0,null,null,null,null
+TM,41,4,27,2,14,2,null,null,Refined oil,General industrial machinery (capital)
+TN,187,158,112,124,75,34,null,null,Crude oil,Textile fabrics
+TO,9,0,1,0,8,0,null,null,null,Other manufactures (intermediate)
+TR,7455,10274,5915,8830,1540,1444,Travel,Other Business Services,Clothing,Metal ores & scrap
+TT,174,189,65,122,109,67,null,null,Organic chemicals,Specialised machinery (capital)
+TV,0,0,0,0,0,0,null,null,null,null
+TW,3324,3718,1163,3430,2161,288,Other Business Services,Financial,Non-ferrous metals,Beverages
+TZ,121,75,42,8,79,67,null,null,Tobacco,Road vehicles other than cars (capital)
+UA,563,476,365,373,198,103,Travel,Travel,Iron & steel,Cars
+UG,80,85,12,2,68,83,null,null,Tobacco,Road vehicles other than cars (capital)
+UM,18,1,0,0,18,1,null,null,null,null
+US,107571,69299,51388,39748,56183,29551,Other Business Services,Other Business Services,Mechanical power generators (intermediate),Medicinal & pharmaceutical products
+UY,218,59,166,40,52,19,Financial,Transportation,Meat & meat preparations,Beverages
+UZ,102,22,23,0,79,22,null,null,Metal ores & scrap,Other manufactures (capital)
+VA,22,0,1,0,21,0,null,null,null,Jewellery
+VC,3,0,0,0,3,0,null,null,null,Furniture (consumer)
+VE,99,148,62,117,37,31,Transportation,Government,Crude oil,Beverages
+VG,527,64,17,3,510,61,null,null,Ships,Ships
+VI,9,0,3,0,6,0,null,null,Ships,Ships
+VN,943,4397,579,4209,364,188,null,null,Telecoms & sound equipment (capital),Other chemicals
+VU,4,0,0,0,4,0,null,null,null,null
+WF,0,0,0,0,0,0,null,null,null,null
+WS,19,0,14,0,5,0,null,null,null,Other manufactures (intermediate)
+XK,0,0,0,0,0,0,null,null,null,Mechanical power generators (intermediate)
+YE,50,16,28,0,22,16,null,null,Refined oil,Refined oil
+ZA,4424,4065,2357,2844,2067,1221,Travel,Transportation,Mineral manufactures,Cars
+ZM,95,28,36,13,59,15,null,null,Mineral manufactures,Road vehicles other than cars (capital)
+ZW,265,120,17,69,248,51,null,null,Mineral manufactures,Cars

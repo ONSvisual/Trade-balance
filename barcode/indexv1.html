@@ -1,0 +1,1932 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,400,500,600,700,800,900|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+    <title>Trade17July</title>
+
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" href="../css/globalStyle.css" />
+    <!--<link rel="stylesheet" href="../css/jquery-ui-1.10.4.custom.min.css">-->
+    <link rel="stylesheet" href="../css/chosenJN2.css"/>
+   <!-- <link rel="stylesheet" href="../css/style-chosen.css"/>-->
+
+
+   <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">-->
+
+    <style type="text/css">
+
+		body{
+			max-width:700px;
+			width: 100%;
+			height:100%;
+			margin:0px auto;
+
+		}
+		
+		#wrapper
+		{
+			position:relative;
+			width:100%;
+			display:block;
+		}
+		
+		#selectNav p{
+			padding-bottom:8px;
+		}
+
+/*		.barcodeName{
+				font-size: 22px;
+				font-weight: 600;
+				color: #124D80;
+				margin-bottom:10px;
+		}
+*/
+		#rowTop{
+				width: 100%;
+				height:auto;
+			}
+		#topPara{
+			height:auto;
+			font-weight:500;
+			font-size:16px;
+			color:#124D80;
+			padding: 10px 10px 10px 10px;
+		}
+		#sel{
+			height:50px;
+			padding-left:2%;
+			padding-top: 5px;
+		}
+
+							#selectNav{
+								width: 50%;
+								height:auto;
+								float:left;
+								}
+
+							#svgMap{
+								overflow: hidden;
+
+							}
+							#map{
+								width: 49%;
+								float:right;
+								height:auto;
+								display: block;
+								background-color: #fff;
+								margin-bottom:30px;
+								border: 2px solid #124D80;
+
+							}
+
+/*							#mapContainer{
+										} */
+
+							.countries {
+											stroke: #fff;
+											stroke-width: 0.05%;
+											fill: #728994;
+											cursor:pointer;
+										}
+							.active {
+										fill: #124D80;
+										fill-opacity:0.9;
+									}
+
+
+
+			#MainInfo{
+					width: 100%;
+					clear: both;
+					/*float:left;
+					border: 3px solid grey;*/
+				}
+
+					.tabContent{
+						width:100%;
+						height:100%;
+					}
+
+					.topLine{
+							position: absolute;
+							height:100%;
+							background-color: #fafafa;
+							border-right: 2px dashed rgba(208, 210, 211, 1);
+							/*--border-color: #5ba741;
+							--border-weight: 2px;*/
+							--dash-size: 12px;
+							--gap-size: 4px;
+							z-index:-10;
+							pointer-events: none;
+							}
+
+
+				/*  center arrows */
+					#defsurp{
+							/*background-color:#f1f1f1;*/
+							position:relative;
+							font-size: 18px;
+							font-weight: 600;
+							
+							/*color:#666;*/
+						}
+
+							.deficit{
+								float:left;
+								padding-right: 10px;
+								padding-top:10px;
+								text-align: right;
+								color:#124D80;
+									background-color: #fafafa;
+									border-right: 2px dashed rgba(208, 210, 211, 1);
+									/*--border-color: #5ba741;
+									--border-weight: 2px;*/
+									--dash-size: 12px;
+									--gap-size: 4px;
+									z-index:-10;
+									pointer-events: none;
+							}
+									.deficit > p{
+										height:25px;
+									}
+
+							.deficit img{
+								height:25px;
+								width:auto;
+								padding:0px 6px 0px 6px;
+								float:top;
+								float:right;
+ 								-webkit-transform: rotate(180deg);
+       							 -ms-transform: rotate(180deg);
+           							 transform: rotate(180deg);
+							}
+							.surplus{
+								padding-left:10px;
+								padding-top:10px;
+								float:left;
+								/*padding-left: 5px;*/
+								text-align:left;
+								color:#124D80;
+							}
+							.surplus > p{
+										height:25px;
+									}
+							.surplus img{
+								height:25px;
+								width:auto;
+								padding:0px 6px 0px 6px;
+								float:left;
+
+							}
+								.defsurpTx{
+									font-size:14px;
+									font-weight:600;
+									color:#124D80;
+									margin: 0px 10px 0px 10px;
+									}
+									
+									#infoKey{
+										display: block;
+										line-height: 40px;
+									}
+									/*#infoKey > text{
+										c
+									}
+*/
+											#key{
+												font-size: 16px;
+												font-weight: 600;
+												float:left;
+												color: #206095;
+												/*padding-top: 10px;
+												padding-bottom: 10px;*/
+													background-color: #fafafa;
+													border-right: 2px dashed rgba(208, 210, 211, 1);
+													/*--border-color: #5ba741;
+													--border-weight: 2px;*/
+													--dash-size: 12px;
+													--gap-size: 4px;
+													/*z-index:-10;*/
+													pointer-events: none;
+											}
+											#keyRight{
+												float:right;
+												text-align: right;
+												vertical-align: text-bottom;
+											}
+
+
+					.imexValues{
+								/*background-color:#EFF;*/
+								width:50%;
+								position:relative;
+								margin-top: 20px;
+							}
+
+					.trade{
+								width: 50%;
+								float:left;
+								margin: 0px 10px 0px 10px;
+								font-size:18px;
+								color:#124D80;
+							}
+							#tradesurplus{
+								text-align:left;
+								font-weight: 400;
+								}
+								.tsamt{
+									font-weight: 600;
+								}
+								.tdamt{
+									font-weight: 600;
+									text-align:right;
+								}
+								
+									.imexFigure,.rankVal{
+													fill: #fafafa;
+													font-size:18px;
+													font-weight: 900;
+														}
+											.rankValIE{
+													font-size:18px;
+													font-weight: 400;
+														}
+														
+							#tradedeficit.rankValIE{
+									fill: #303B41;
+								}
+								#tradesurplus.rankValIE{
+									fill: #123952;
+								}
+
+				#chartArea{
+						position:relative;
+						clear: both;
+						width:100%;
+					}
+
+				#graphic{
+						position:relative;
+						width:100%;
+						height:auto;
+					}
+					.chart{
+					background-color: rgba(	90, 90, 90, 0);
+					}
+
+
+			.bar_pos { fill: #2471a3 ;
+					opacity:0.9;
+					}
+        	.bar_neg { fill: #5F7682;
+					opacity:0.7;
+					 }
+
+				.ghostBar{
+					fill: #eee;
+					stroke: #999;
+					stroke-width : 0.5px;
+				}
+
+				.rankText{
+					font-size:14px;
+					font-weight:500;
+					fill:#124D80;
+				}
+				
+			.topServices{
+				height:50px;
+				font-size:16px;
+				font-weight:500;
+				color:#124D80;
+			}
+
+				#topGSleft{
+					margin: 0px 10px 0px 10px;
+					float:left;
+				}
+				#topGSright{
+					margin: 0px 10px 0px 10px;
+					float:left;
+				}
+
+		.englandText{
+			font-size:12px;
+			fill:#2c71b8;
+		}
+
+		.selectedareaText{
+			font-size:18px;
+			font-weight:600;
+		}
+
+
+		g.x.axis line, g.x2.axis line{
+			stroke-width:1px;
+		}
+
+		.dropLines{
+				margin-bottom: 8px;
+		}
+
+
+				#tabs{
+					width: 100%;
+					height:85px;
+					overflow:hidden;
+					/*margin-bottom: 10px;*/
+				}
+				p.tparaTx{
+						/*text-decoration: underline #124D80;*/
+						color:#124D80;
+						padding-bottom:5px;
+						font-size:18px;
+						font-weight:600;
+							}
+
+				p.totalTrade{
+					text-decoration: underline #124D80;
+						font-size:18px;
+							font-weight:600;
+				}
+
+				.tablink{
+							position: relative;
+
+						  height: 75px;
+							float: left;
+						  background: #eaeaea;
+						  background-clip: content-box;
+						  padding:0px 7px 7px 7px;
+						  }
+
+				.tablinkClicked {
+					 width: 33%;
+							 background-color: #FFF;
+							  border-top: solid 2px #206095;
+							  border-left: solid 2px #206095;
+							  border-right: solid 2px #206095;
+							  border-bottom: none;
+							  pointer-events: none;
+							}
+
+				.tablinkNotClicked {
+							 width: 33%;
+					  		border: none;
+							  border-bottom: solid 2px #206095;
+							  cursor: pointer;
+							}
+
+
+				.tablink:hover {
+								  background: #ddd;
+								  background-clip: content-box;
+								  padding:0px 7px 7px 7px;
+								}
+
+	@media(max-width:599px){
+
+						#selectNav{
+								width: 100%;
+								}
+
+							#map{
+								display: none;
+							}
+
+					.selectedareaText{
+								font-size:14px;
+								font-weight:600;
+							}
+
+
+					#tabs{
+					height:65px;
+					overflow:hidden;
+					margin-bottom: 10px;
+					}
+
+					.tablink{
+						  height: 75px;
+						  font-size:12px;
+							text-decoration: underline;
+							font-weight:500;
+						  }
+
+
+
+				.tablinkClicked {
+					 width: 50%;
+
+							}
+
+				.tablinkNotClicked {
+					 width: 24%;
+
+							}
+
+				p.totalTrade{
+					text-decoration: underline #124D80;
+						font-size:14px;
+							font-weight:600;
+
+						}
+				p.tparaTx{
+					padding-bottom: 5px;
+						font-size:14px;
+							font-weight:600;
+				}
+
+
+}
+
+
+	.zoom-control-zoom a, .zoom-control-layers-toggle {
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        display: block;
+		position:relative;
+    }
+
+    .zoom-control-zoom a {
+        width: 22px;
+        height: 22px;
+        text-align: center;
+        text-decoration: none;
+        color: #323132;
+    }
+
+    .zoom-control-zoom-in {
+        cursor:pointer;
+        font: bold /*18px/*/24px Arial, Helvetica, sans-serif;
+    }
+
+    .zoom-control-zoom-in:hover {
+            color: #fff;
+            background-color: #323132;
+    }
+
+    .zoom-bar-part {
+        background-color: #ededed;
+        border-bottom: 1px solid white;
+    }
+
+    .zoom-control-zoom-out {
+        cursor:pointer;
+        font: bold 24px/*/20px*/ Tahoma, Verdana, sans-serif;
+    }
+
+    .zoom-control-zoom-out:hover {
+        color: #fff;
+        background-color: #323132;
+    }
+
+    .zoom-bar-part-bottom {
+        border-bottom: none;
+    }
+
+    .zoom-container {
+        margin-left: 8px;
+        margin-top: 55px;
+        position: absolute;
+        left: 0px;
+        /* top: 0px; */
+    }
+
+    /* .zoom-bar {
+        border: 1px solid #323132;
+    } */
+
+    .zoom-popup-pane, .zoom-control {
+        cursor: auto;
+    }
+
+    .zoom-control {
+        float: left;
+        clear: both;
+    }
+
+    .zoom-control {
+        z-index: 1;
+        pointer-events: auto;
+    }
+
+</style>
+
+    <script>
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-37894017-1']);
+		  _gaq.push(['_trackPageview']);
+
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+    </script>
+	</head>
+
+	<body>
+
+     <div id="wrapper">
+
+            <div id="rowTop">
+                <div id='selectNav'></div>
+                <div id="map">
+                        <div class="zoom-container zoom-control-zoom zoom-bar zoom-control hidden-xs">
+                        <a id="zoom-in" class="zoom-control-zoom-in zoom-bar-part zoom-bar-part-top" title="Zoom in">+</a>
+                        <a id="zoom-out" class="zoom-control-zoom-out zoom-bar-part zoom-bar-part-bottom" title="Zoom out">-</a>
+                        </div>
+                </div>
+           </div>
+
+
+           <div id="MainInfo">
+                <div id='tabs'></div>
+                <div id='defsurp'></div>
+                <div id='infoKey'></div>
+           </div>
+
+
+      		<div id="chartArea">
+                <div id="graphic"></div>
+        	</div>
+
+      </div>
+
+
+        <script src="https://cdn.ons.gov.uk/vendor/jquery/2.1.4/jquery.min.js"></script>
+        <script src="../lib/modernizr.custom.56904.js"></script>
+            <script src="../lib/topojson.js"></script>
+            <!-- <script src="../lib/svg-pan-zoom.min.js"></script>-->
+        <script src="https://cdn.ons.gov.uk/vendor/d3/3.5.17/d3.min.js" type='text/javascript'></script>
+        <script src="https://cdn.ons.gov.uk/vendor/pym/1.3.2/pym.v1-3-2.min.js" charset="utf-8"></script>
+	    <script src="https://cdn.ons.gov.uk/vendor/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+    	<script src="../lib/chosen.jquery.js" type="text/javascript"></script>
+
+       <script>
+
+
+            var graphic = d3.select('#graphic');
+			var selectNav = d3.select('#selectNav');
+            var pymChild = null;
+			dvc = {};
+
+
+
+function createStructure(){ // console.log(names, bar_data);
+
+				var areacodes =  graphic_data.map(function(d) { return d.AREACD; });
+				var areanames =  graphic_data.map(function(d) { return d.AREANM; });
+				var menuarea = d3.zip(areanames,areacodes).sort(function(a, b){
+									return d3.ascending(a[0], b[0]);
+								});
+		d3.select("#selectNav").selectAll("*").remove();
+
+
+				// Build option menu for occupations
+			var optns = d3.select("#selectNav")
+							.append("div")
+							.attr("id","sel")
+							.append("select")
+							.attr("id","areaselect")
+							//.attr("style", "width: 95%")
+
+//							function(d,i){
+//								if(parseInt(graphic.style("width")) < dvc.optional.mobileBreakpoint){
+//									return "width:99%";
+//								} else {
+//									return "width:99%"; //300px"
+//								}
+//							})
+							.attr("class","chosen-select");
+
+				optns.append("option")
+					.attr("value",null)
+					.text("");
+
+				optns.selectAll("p")
+					.data(menuarea)
+					.enter()
+					.append("option")
+					.filter(function(d,i){
+						if(d[1] != dvc.essential.highlight){
+							return d;
+						}
+					})
+					.attr("value", function(d){ return d[1]})
+					.text(function(d){ return d[0]});
+
+
+			var selWidth = parseInt(selectNav.style("width")); console.log("selWidth " + selWidth);
+			$('#areaselect').chosen({ width: (selWidth*0.95)+"px", allow_single_deselect:true })
+					.on('change',function(evt, params){
+												//unhighlight();
+												//console.log("zoomto ", params.selected);
+												//zoomto(params.selected);
+
+												if(typeof params != 'undefined') {
+																				filtereddata = graphic_data.filter(function(d) {
+																				return d.AREACD == params.selected;
+																				});
+															//console.log("send to highlight from dropdown");
+															//console.log(filtereddata[0]);
+															highlight(filtereddata[0].AREACD,filtereddata[0].AREANM)
+															d3.select("#graphic").style("pointer-events", "none")
+												} else {
+														d3.select("#graphic").style("pointer-events", "all")
+														resetMap();
+														unhighlight();
+														removeFigures();
+												}
+					});
+
+				 d3.select("#selectNav").append("div")
+								.attr("id", "topPara")
+								//.append('p')
+								//.append('html')
+								.html('<p>Use the dropdown above or the map on the right to select a country to view trade balances.</p> <p>Alternatively explore the barcode chart below by rolling over the lines that represent each country in the world.</p>');
+								
+								
+
+			////   Adds the 3 big divs for to house all the content, v.!
+			graphic.selectAll("*").remove();
+
+									 graphic.selectAll("div")
+											.data(names)
+											.enter()
+											.append("div")
+											.attr("id", function(d,i){
+												return names[i];
+											})
+											.attr("class", "tabContent")
+											.style("display", function(d,i){
+															if(names[i] !=="Total")	{ return "none"; }
+															else return "block";
+											});
+
+
+				addMap()
+				drawGraphic(names)
+
+	}  /////////////   end createStructure()  ///////////////////////////////////
+
+
+
+
+
+
+
+function drawGraphic(names){
+
+			 var threshold_md = 600;
+			 var threshold_sm = dvc.optional.mobileBreakpoint;
+
+			   //set variables for chart dimensions dependent on width of #graphic
+				if (parseInt(graphic.style("width")) < threshold_sm) {
+						margin = {top: dvc.optional.margin_sm[0], right: dvc.optional.margin_sm[1], bottom: dvc.optional.margin_sm[2], left: dvc.optional.margin_sm[3]};
+						var chart_width = parseInt(graphic.style("width")) - margin.left - margin.right;
+						height = dvc.essential.height_sm_md_lg[0] +0 - margin.top - margin.bottom;
+				} else if (parseInt(graphic.style("width")) < threshold_md){
+						margin = {top: dvc.optional.margin_md[0], right: dvc.optional.margin_md[1], bottom: dvc.optional.margin_md[2], left: dvc.optional.margin_md[3]};
+						var chart_width = parseInt(graphic.style("width")) - margin.left - margin.right;
+						height = dvc.essential.height_sm_md_lg[1] +0 - margin.top - margin.bottom;
+				} else {
+						margin = {top: dvc.optional.margin_lg[0], right: dvc.optional.margin_lg[1], bottom: dvc.optional.margin_lg[2], left: dvc.optional.margin_lg[3]}
+						var chart_width = parseInt(graphic.style("width")) - margin.left - margin.right;
+						height = dvc.essential.height_sm_md_lg[2] +0 - margin.top - margin.bottom;
+				}
+			console.log("Dimension chart_width, height: "+chart_width, height);
+
+	////////////  Barchart setup  //////////////////////////////////////////////////////////
+
+		barchartWidth = chart_width*1.0; // width of barcharts.
+
+
+	// barchart scales
+
+			x2 = d3.scale.linear();
+
+
+			y = d3.scale.ordinal()
+				.rangeRoundBands([0, (height) - 10], .1) // the 40 is for the x-axis
+				.domain(["imports"]);
+
+		   yAxis = d3.svg.axis()
+		        .scale(y)
+		        .orient("left")
+
+
+       // console.log(bar_data);
+		    bars = {};
+			maxiBar = 0;
+		    for (var column in bar_data[0]) {
+          j = 1;
+		  dual = 0;
+          lastamt = 0;
+		        if (column == 'AREACD') continue;
+console.log(column);
+		        bars[column] = bar_data.sort(function(a,b){return +b[column]- +a[column]}).map(function(d) {
+
+              if(+d[column] < lastamt) {
+				  //console.log(d[column] + ", " + lastamt + ", " + j)
+                ++j + dual;
+              }
+
+				//if(d[column] > maxiBar) {  console.log(d[column]); maxiBar = d[column];  }
+
+              lastamt = +d[column]
+		            return {
+		                'amt': d[column],
+		                'name': d.AREACD,
+                    	'rank': j
+		            };
+
+//				 if(d[column] == lastamt) { console.log(dual); dual++;
+//										  }	else {
+//											  dual = 0;
+//										  }
+		        });
+		    }
+console.log(bars);
+
+		//y domain calculations	: zero to intelligent max choice, or intelligent min and max choice,  or interval chosen manually
+	   		if (dvc.essential.xAxisScale == "auto_zero_max"){
+			   var xDomain = [
+								0,
+								d3.max(d3.entries(bars), function(c) {
+									return d3.max(c.value, function(v) {
+										var n = v.amt;
+										return Math.ceil(n);
+									});
+								})
+							 ];
+			} else if (dvc.essential.xAxisScale == "auto_min_max"){
+				var xDomain = [
+								d3.min(d3.entries(bars), function(c) {
+									return d3.min(c.value, function(v) {
+										var n = v.amt;
+										return Math.floor(n);
+									});
+								}),
+
+								d3.max(d3.entries(bars), function(c) {
+									return d3.max(c.value, function(v) {
+										var n = v.amt;
+										return Math.ceil(n);
+									});
+								})
+					 		];
+			} else {
+			   var xDomain = dvc.essential.xAxisScale;
+		    }
+
+		    x2.domain(xDomain);
+
+			 xAxis2 = d3.svg.axis()
+		        .scale(x2)
+		        .orient('bottom');
+
+		//specify number or ticks on x axis
+
+			if ( parseInt(graphic.style("width")) <= threshold_sm) {
+				xAxis2.ticks(dvc.optional.x_num_ticks_sm_md_lg[0]);
+			// } else if (graphic.width <= threshold_md){
+			//	xAxis2.ticks(dvc.optional.x_num_ticks_sm_md_lg[1])
+			 } else {
+				xAxis2.ticks(dvc.optional.x_num_ticks_sm_md_lg[2]);
+			 }
+
+
+
+	////////////  Barcode scale   //////////////////////////////////////////////////////////
+
+				var x = d3.scale.linear();
+
+
+				var xAxis = d3.svg.axis()
+					.scale(x);
+
+
+			var mini = 0
+			var maxi = 0;
+
+						names.forEach(function(d,i){
+								var oneBar = graphic_data.map(function(dat) { return +dat[d]; });
+												if(d3.min(oneBar) < mini) mini = d3.min(oneBar);
+												if(d3.max(oneBar) > maxi) maxi = d3.max(oneBar);
+							});
+							
+
+			   x.domain([-40000,40000])
+				.range([ 0, chart_width * 0.9]);
+
+				// So to balance the '0'
+				dvc.half = x(0) * 1;
+				x2.range([0, dvc.half * 1.8]); //(barchartWidth * 0.8) - ylabelGap ]); *2 would be too much
+
+
+		 // sort out map buttons
+		 d3.select('.zoom-container').style('left', (barchartWidth-30)+"px");
+		 d3.selectAll('.zoom-bar-part').on('click', zoomClick);
+
+
+
+
+
+		////	// Draw deficit Surplus
+			 var arrows = d3.select("#defsurp")
+			 				 //.style('left', ((dvc.half + margin.left) - (barchartWidth*0.25)) +"px")
+							.style("width", barchartWidth +"px")
+							.style("height", 50 +"px")
+
+console.log("barchartWidth*0.5: " + barchartWidth*0.5 );
+console.log("dvc.half = x(0):"+dvc.half);
+console.log("margin.left:"+margin.left);
+console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + margin.left) - (barchartWidth*0.25)) );
+
+			arrows.append("div")
+                .attr("class", "deficit ")
+				.style('width', (dvc.half + margin.left - 10 -1) +"px")
+				.append('p')
+				.append('text')
+				.text('Deficit (M)')
+				//.append('tspan')
+				.append('img')
+				.attr('src', "../images/arra2.svg");
+
+			arrows.append("div")
+                .attr("class", "surplus")
+				.style('width', (dvc.half - 10)+"px")
+				.append('p')
+				.append('text')
+				.text('Surplus (M)')
+				.append('img')
+				.attr('src', "../images/arra2.svg")
+
+		if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
+			d3.select('.deficit')
+				.append('p')
+				.attr('class', 'defsurpTx')
+				.style('align-text', 'right')
+				.text("import more than export")
+
+			d3.select('.surplus')
+				.append('p')
+				.attr('class', 'defsurpTx')
+				.text('export more than import')
+		
+
+        // Add Balance info. and key
+//          var infoKey = d3.select("#MainInfo")
+//                 			.append('div')
+//				            .attr("class", "infoKey")
+//							.style('height', 50+"px")
+//							.style('width', barchartWidth +"px");
+
+			
+			d3.select("#infoKey").style('height', 40+"px").style('width', barchartWidth);
+			
+			d3.select("#infoKey").append("div")
+							   .attr("id", "key")
+							   .style('width', dvc.half+margin.left-1/*barchartWidth*/ +"px")
+							   .style('height', 40+"px");
+							   
+			d3.select("#infoKey").append("div")
+							   .attr("id", "keyRight")
+							   .style('width', barchartWidth - (dvc.half+margin.left-1) +"px")
+							   .style('height', 40+"px");
+							   
+				  d3.select("#key").append('text')
+									   .style("color", "#ff9933")
+									   .text('| EU countries')
+									   .append('tspan')
+									   .style("color", "#5F7682")
+									   .text(' | Rest of the world');
+									   
+			} else {
+				d3.select("#infoKey").style('height', 40+"px").style('width', barchartWidth);
+				
+				 d3.select("#infoKey").append('text')
+									   .style("color", "#ff9933")
+									   .text('| EU countries')
+									   .append('tspan')
+									   .style("color", "#5F7682")
+									   .text(' | Rest of the world');
+				
+			}
+
+// Add meridian to each tab page
+					names.forEach(function(d){
+						d3.select("#"+d).append('div')
+							.attr('class', 'topLine')
+							.style('width', (dvc.half+margin.left - 1) +"px")
+							//.style('height', 400+"px")
+							//.style('background-color', '#fff')
+						})
+
+
+//		var voronoi = d3.voronoi()
+//				.x(function(d) { return x(d.amt) })
+//				.y(function(d) { return 0; })
+//				.extent([[-margin.left, -margin.top], [chart_width, 30]]);
+
+
+
+//  *********************************************************************************************************************
+//  *********************************************************************************************************************
+//							BIG LOOP		For all the elements that			BIG LOOP
+//  *********************************************************************************************************************
+//  *********************************************************************************************************************
+
+		// draw bars for barcode
+		//namesTest = ["Balance"];
+	names.forEach(function(d,i){
+								type1 = d;
+
+		//<  0nclass="tablinks" onclick="openCity(event, 'London')">London</button>
+				tabInd = -1;
+					d3.select("#tabs").append('div')
+										.attr('tabindex', function(){
+															return i;
+														})
+									.append("button")
+									.attr("class", "tablink")
+									.attr("id", function(){
+										return "tab"+type1;
+									})
+									.attr('value', function(){
+										return i;
+									})
+									.attr('aria-checked', function(){
+										if(i !== 0) { return false; }
+										else { return true; }
+									})
+									.html(function(){
+										if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
+										//if(type1==="Total") type1 = "Total trade";
+											return '<p class = "tparaTx">' + type1 + ' balance</p><p class="totalTrade" id = ' + "tpara"+i + '></p>' }
+									 else { return '<p class = "tparaTx">' + type1 + '</p><p class="totalTrade" id = ' + "tpara"+i + '></p>' }
+													})
+									.on("click", function() { 	d3.selectAll(".tablink").classed("tablinkClicked", false);
+																d3.selectAll(".tablink").classed("tablinkNotClicked", true);
+																
+									// put it back
+									//if(type1==="Total trade") type1 = "Total";
+																
+//				var rankP = d3.select("#chartBox"+i).select("g#stopSelect"+i ).select(".bar.bar_pos"); 
+//				var rankPos = rankP[0][0];
+//				var rankPosx = d3.select(rankPos).attr("x");
+//				var rankPosWid = d3.select(rankPos).attr("width");
+
+																d3.select(this).classed('tablinkClicked', true);
+																d3.select(this).classed('tablinkNotClicked', false);
+														var but = d3.select(".tablinkClicked").attr("id");
+														var butt = but.substring(3,11);
+															//	console.log("send: "+ butt, this);
+															  openPage(butt, this);
+															  });
+
+							d3.selectAll('.tablink').classed("tablinkNotClicked", true);
+							d3.select("#tabTotal").classed("tablinkClicked", true);
+							d3.select("#tabTotal").classed("tablinkNotClicked", false);
+
+					// Add chart svg
+					var svg = d3.select("#"+type1).append('svg')
+						.attr("class","chart")
+        				//.style("background-color","#fafafa")
+				        .attr("width", chart_width + margin.left + margin.right)
+				        .attr("height", height + margin.top + margin.bottom + 25) // 20 = extra svg space for furniture
+				        .append("g")
+				        .attr("transform", "translate(" + margin.left + "," + (margin.top+2) + ")");
+
+
+			// Summary text
+			// add the top drop line
+/*				svg.append("text") // was myDrop when inside rapper
+					.attr("id", function(){
+						return "dropLine"+i;
+					})
+					.attr("class", "dropLines")
+					.attr("x",10)
+					.attr("y",0)
+					.text("Roll over barcode")
+*/					//.style("display", "none");
+
+
+											//diff = d3.mean(center) - x(0); console.log(x(0), diff, xoffset)
+
+					svg.append('g')
+						.attr('class', 'x axis')
+						.attr('transform',  'translate(' + 0  + ' ,' + (height + 6)  + ')') // 6px down from barcode
+						.call(xAxis);
+
+
+          svg .append("text")
+               .attr('class', 'x axis')
+               .attr("y", 45)
+               .attr("x", (dvc.half*2) + margin.left)
+               .attr("dy", ".71em")
+               .attr("transform", "translate(" + ((dvc.half * 0.9) - x2(0)) + ", "+ (height*0.8) +")")
+               .style("text-anchor", "end")
+               .text(dvc.essential.xAxisLabel);
+
+
+				svg.append('g').attr("class","barcodeline").selectAll('rect')
+						.data(graphic_data)
+						.enter()
+						.append('rect')
+						.attr("fill", function(d){
+								//console.log(d.EU);
+								if(d.EU === "TRUE") { return "#FF9933"; }
+												else { return "#5F7682"; }
+						})
+						.style("opacity", 0.8)
+						.attr("class",function(d,i){
+							if(d.AREACD != dvc.essential.highlight){
+								return d.AREACD + " hoverbar allbars";
+							} else {
+								return d.AREACD + " allbars";
+							}
+						})
+						.attr("id",function(d,i){
+							return d.AREACD;
+						})
+						.attr("stroke-width",2) // voronoi instead
+						.attr("stroke","rgba(1,1,1,0)")
+						.attr("opacity","0.3")
+						.attr("width", 1.5)
+						.attr("height", height)
+						.attr("y", 0)
+						.attr("x", function(d){
+							if(d[type1] !="null"){
+								return x(d[type1]);
+							}
+						})
+						.style("display", function(d){
+							if(d[type1] =="null"){
+								return "none";
+							}
+						})
+						.on("mouseover", function() { /* console.log("mouseover barcode, info sent to highlight():"); */  highlight(/*this.parentNode.__data__,*/ this.__data__.AREACD, this.__data__.AREANM)});
+						//.on("mouseout", unhighlight)          d3.select(this.parentNode).attr("id")
+
+
+
+				svg.append('g').attr("class","englandText")
+						.selectAll('text')
+						.data(graphic_data)
+						.enter()
+						.append('text')
+						.attr("x", function(d){
+							if(d[type1] !="null"){
+								return x(d[type1])+3;
+							}
+						})
+						//.attr("y",height)
+						.text(function(d,j){ // Id = d.AREACD;
+							if(d.AREACD == dvc.essential.highlight){
+								return d.AREANM +": "+d3.format(dvc.essential.dataFormats)(d[type1])
+							}
+						});
+						// add tspan and rank here if needed.
+
+
+
+//					  var voronoiGroup = g.append("g")
+//										  .attr("class", "voronoi");
+//
+//							 voronoiGroup.selectAll("path")
+//										.data(voronoi.polygons(d3.merge(data.map(function(d) { return d.values; }))))
+//										.enter().append("path")
+//										  .attr("d", function(d) { return d ? "m" + d.join("L") + "Z" : null; })
+//										  .on("mouseover", mouseover)
+//										  .on("mouseout", mouseout);
+
+
+
+
+				var tradeValues = d3.select("#"+type1).append("div")
+									.attr("class", "imexValues")
+			 				 		.style('left', margin.left +"px")
+									.style("width", barchartWidth+"px");
+									//.style("height", 50+"px");
+
+
+							var Checkatrade = tradeValues.append("div")
+									//.style("background-color", "#fafafa")
+										.attr("id", function(){ return "tradedeficit" + i })
+										.attr("class", "trade")
+										.style('width', (dvc.half-20) +"px"); // - (barchartWidth*0.25)) );
+
+								Checkatrade/*.append('p')*/
+										.append('text')
+										.attr('class', "tdamt")
+										.text("")
+										.append('span')
+										.append('text')
+										.style("font-weight", 400)
+										.attr("text-align", "right")
+										.text("Imported");
+										
+										//d3.select("#tradedeficit").select(".tdamt").select('text').remove();
+
+
+							var Checkatrade2 = tradeValues.append("div")
+									//.style("background-color", "#f3f3f3")
+										.attr("id", function(){ return "tradesurplus" + i })
+										.attr("class", "trade")
+										.style('width', dvc.half +"px");
+
+								Checkatrade2/*.append('p')*/
+										.append('text')
+										.text('Exported')
+										.append('span')
+										.attr('class', "tsamt")
+										.append('text');
+
+
+		// add the bar chart container
+		var myDrop = d3.select("#"+d);// .append("g");
+
+				myDrop.append("div")
+					.attr("class", "mcChartie")
+					.attr("id", function(){
+												return "mcChart"+i;
+											})
+					.append("svg")
+					.attr("id", function(){
+												return "chartBox"+i;
+											})
+				    .attr("width", barchartWidth)
+					.attr("height", height*1.5); // 10 for the x-axis label
+
+
+			// add the top service imported / exported If needed
+			if(d !== "Total" && parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
+
+					d3.select("#mcChart"+i).append("div")
+									.attr("id", function(){
+										return "topservice"+i;
+									})
+									.attr("class", "topServices")
+									.style('width', barchartWidth+"px");
+
+								};
+
+
+
+			// create x-axis
+			//xAxis2.ticks = 5;
+				    d3.select("#chartBox"+i).append('g')
+				        .attr('class', 'x2 axis')
+				        .attr("transform", "translate(" + (dvc.half + margin.left - x2(0)) + ", "+ (height*0.8) +")")
+				        .call(xAxis2);
+
+					d3.select("#chartBox"+i)
+						 .append("text")
+						 .attr('class', 'x2 axis')
+						 .attr("y", 25)
+						 .attr("x", (dvc.half*2) + margin.left)
+						 .attr("dy", ".71em")
+						 //.attr("transform", "translate(" + (dvc.half - x2(0)) + ", "+ (height*0.8) +")")
+						  .attr("transform", "translate(" + ((dvc.half * 0.9) - x2(0)) + ", "+ (height*0.8) +")")
+						 .style("text-anchor", "end")
+						 .text(dvc.essential.xAxisLabel);
+
+
+			//create y axis, if x axis doesn't start at 0 drop x axis accordingly
+					d3.select("#chartBox"+i).append('g')
+				        .attr('class', 'y axis')
+//				        .attr('transform', function(d){
+//				        			if(xDomain[0] != 0){
+//										return 'translate(0 ,0)'  // margin.left
+//									} else {
+//										return 'translate(' + ylabelGap*2  + ', 0)'
+//									}
+//							})
+				        .call(yAxis);
+						
+
+//console.log(bars["Totalexport"][0].amt, x2(bars["Totalexport"][0].amt))
+
+						d3.select("#chartBox"+i)
+							.append('rect')
+							.attr('class', 'ghostBar')
+							.attr("width", function(d,i) {
+													return x2(bars["Totalexport"][0].amt) - x2(0); })
+							.attr("height", y.rangeBand())
+							.attr("x", x2(0))
+							.attr("transform", "translate(" + (dvc.half + margin.left - x2(0)) + "," + (height*0.1) + ")");
+
+						d3.select("#chartBox"+i)
+							.append('rect')
+							.attr('class', 'ghostBar')
+							.attr("width", function(d,i) {
+													return x2(bars["Totalexport"][0].amt) - x2(0); })
+							.attr("height", y.rangeBand())
+							.attr("x", x2(0)- (x2(bars["Totalexport"][0].amt) - x2(0)) )
+							.attr("transform", "translate(" + (dvc.half + margin.left - x2(0)) + "," + (height*0.1) + ")");
+
+
+							// add this for the actual bars so they don't interfer with the ghosts
+							d3.select("#chartBox"+i).append('g').attr('id', 'stopSelect'+i)
+
+
+					svg.append('g')
+						.append('text')
+						.attr("class","selectedareaText")
+						//.attr("x", 4)
+						//.attr("y",56)
+						.style("display", "none")
+						.text("name of area")
+
+
+
+		});// ends forEach names /////////////////////////////////////////
+
+		//remove unwanted items
+			d3.selectAll("g.y.axis").select("g.tick").remove();
+			d3.selectAll("g.x.axis").select("path.domain").remove();
+			d3.selectAll("g.x2.axis").select("path.domain").remove();
+
+			
+} //end drawGraphic
+
+
+
+function openPage(pageName, elmnt) { // console.log(pageName);
+						 var x, tabcontent, tablinks;
+
+							  tabcontent = document.getElementsByClassName("tabContent");
+
+							 // d3.selectAll(".tablink").style("background-color", "#d5d8dc");
+							 // d3.select("#tab"+ pageName).style("background-color", "#fff");
+               d3.select(".tabSelected").classed("tabSelected",false);
+               d3.select("#tab" + pageName).classed('tabSelected', true);
+							  for (x = 0; x < names.length; x++) {
+								tabcontent[x].style.display = "none";
+								//taball[x].style.display = "none"; //.backgroundcolor = "#abc"; // all tabs back to standard
+							  }
+
+							  // Show the specific tab content
+							  document.getElementById(pageName).style.display = "block";
+							  
+	}
+
+
+
+function addMap(){
+
+				d3.json("data/worldjson8.json", function(error, geog){
+					
+					mapHeight = 190;
+
+				 	svg = d3.select("#map")
+								  .append("svg")
+								  .attr("id","svgMap")
+								  .attr("width", barchartWidth/2)
+								  .attr("height", mapHeight)
+								  .append('g')
+								  .attr('class', 'map');
+
+
+					projection = d3.geo.equirectangular()
+                     .scale((barchartWidth/2) * 0.15)
+                     .translate( [(barchartWidth/4)-18, mapHeight/2+(mapHeight/2)*0.25]);
+
+					path = d3.geo.path().projection(projection);
+
+						  svg.append("g")
+							  .attr("class", "allcountry")
+								.selectAll("path")
+							  .data(topojson.feature(geog, geog.objects.worldjson8).features)
+							  .enter()
+							  .append("path")
+							  .attr("class","countries")
+							  .attr("id", function(d){return "shape" + d.properties.fips})
+							  .attr("d", path)
+							  // was "click"
+							  .on("mouseover", function(d){ clicked(d) }); // was click
+							 // .on("mouseover",function(d){
+//								highlightcountry(d.properties.fips);
+//								filterdata(d.properties.fips);
+//							  })
+//							  .on("mouseout",function(d){
+//								unhighlightcountry(d.properties.fips);
+//								filterdata("W1");
+//							  })
+
+						d3.select("#shapeAQ").remove();
+
+				zoom = d3.behavior.zoom()
+							   .translate([0, 0])
+							   .scale(1)
+							   .scaleExtent([1, 8])
+							   .on("zoom", zoomed);
+
+							   svg.call(zoom)
+								  .call(zoom.event);
+
+
+		}); // ends json parse and use
+
+}  // ends addMap
+
+
+
+function zoomClick() {
+
+  center = [(barchartWidth / 4), (mapHeight / 2)];
+
+  d3.event.preventDefault();
+
+      var scale = zoom.scale(),
+          extent = zoom.scaleExtent(),
+          translate = zoom.translate(),
+          x = translate[0], y = translate[1],
+          //factor = (this.id === 'zoom_in') ? 1.2 : 1/1.2,
+          factor = (this.id === 'zoom-in') ? 1.3 : 1/1.3,
+          target_scale = scale * factor;
+
+      // If we're already at an extent, done
+      if (target_scale === extent[0] || target_scale === extent[1]) { return false; }
+      // If the factor is too much, scale it down to reach the extent exactly
+      var clamped_target_scale = Math.max(extent[0], Math.min(extent[1], target_scale));
+      if (clamped_target_scale != target_scale){
+          target_scale = clamped_target_scale;
+          factor = target_scale / scale;
+      }
+
+      // Center each vector, stretch, then put back
+      x = (x - center[0]) * factor + center[0];
+      y = (y - center[1]) * factor + center[1];
+
+      // Transition to the new view over 350ms
+
+          interpolate_scale = d3.interpolate(scale, target_scale);
+          interpolate_trans = d3.interpolate(translate, [x,y]);
+
+          console.log(interpolate_scale)
+
+          svg.transition()
+              .duration(750)
+              .call(zoom.scale(target_scale).translate([x,y]).event);
+
+}
+
+
+
+function zoomto(area) { //console.log("ƒ zoomto");
+	//d3.select("#shape" + ID).classed('countries_highlights', false);
+	selectID = area;
+	//console.log("ƒ zoomedto, data recieved:");
+	//console.log(area, selectID);
+
+	d3.select(".active").classed("active",false);
+	d3.select("#shape" + selectID).classed('active', true);
+
+
+       bounds = d3.select("#shape" + selectID).node().getBBox();
+
+        var dx = bounds.width,
+			dy = bounds.height,
+			x = bounds.x + (bounds.width/2),
+			y = bounds.y + (bounds.height/2)
+
+       scale = Math.max(1, Math.min(8, 0.9 / Math.max(dx / (barchartWidth/2), dy / mapHeight))),
+       translate = [(barchartWidth/2) / 2 - scale * x, mapHeight / 2 - scale * y];
+
+       svg.transition()
+           .duration(750)
+           .call(zoom.translate(translate).scale(scale).event);
+
+ };
+
+
+function zoomed() {  // console.log("ƒ zoomed");
+			  d3.select(".allcountry").style("stroke-width", 1.5 / d3.event.scale + "px");
+			  d3.select(".allcountry").attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+ }
+
+
+function clicked(d) { //console.log("ƒ clicked, data recieved:");
+
+				// if (active.node() === this){ return reset(); } //never goes there
+				
+				//d3.select("#graphic").style("pointer-events", "none");
+        
+
+				   d3.select(".active").classed("active",false); // get last active country
+
+				   d3.select("#shape"+d.properties.fips).classed("active", true);
+
+				   var bounds = path.bounds(d),
+					   dx = bounds[1][0] - bounds[0][0],
+					   dy = bounds[1][1] - bounds[0][1],
+					   x = (bounds[0][0] + bounds[1][0]) / 2,
+					   y = (bounds[0][1] + bounds[1][1]) / 2,
+					   scale = Math.max(1, Math.min(8, 0.9 / Math.max(dx / (barchartWidth/2), dy / mapHeight))),
+					   translate = [(barchartWidth/2) / 2 - scale * x, mapHeight / 2 - scale * y];
+
+				   svg.transition()
+					   .duration(750)
+					   .call(zoom.translate(translate).scale(scale).event);
+
+					// change chosen country label
+					highlight(d.properties.fips, d.properties.name); // d
+					
+		// if country selected & cross has been removed - reset map and remove all data from charts.
+		// shut off pointer on barcode
+        //if(d3.select(".chosen-single-with-deselect").classed("chosen-default") === true ) {  console.log("go reset");  return reset(); };
+		//if(d3.select(".search-choice-close") == false) {  console.log("go reset");  return reset(); };
+		
+		//$(".chosen-single-with-deselect").find("[abbr='search-choice-close']").contents().filter(function () {
+    //select only text nodes of the targetted td element
+   // return this.nodeType == 3; });
+	
+ }
+
+
+ function resetMap() {
+	 console.log("ƒ resetMap"); //console.log(active);
+			 // active.classed("active", false);
+			  //active = d3.select(null);
+
+			  svg.transition()
+				  .duration(750)
+				  .call(zoom.translate([0, 0]).scale(1).event);
+
+          //remove all data from charts.
+ }
+
+
+
+function highlight(/*chartType,*/ selectedID, selectedName) {//console.log("ƒ highlight, data recieved:"); console.log(/*chartType, */selectedID, selectedName);
+
+			//var chartOne = chartType/*.__data__*/;
+
+			/*if(area) */unhighlight();
+
+			//if(selectedID != dvc.essential.highlight){
+				d3.selectAll("." + selectedID)
+//					.attr("fill", function(d){
+//								if(d.EU === "TRUE") { return "#FFCC00"; }
+//												else { return "#5F7682"; }
+//						})
+					.attr("opacity", 1)
+					.attr("width",4)
+					.transition()
+					.attr("y",-20)
+					//.transition()
+					//.attr("height", height+10)
+			//}
+			
+			$("#areaselect").val(selectedID);
+			$("#areaselect").trigger("chosen:updated");
+
+			names.forEach(function(d,i){
+										 d3.select("#place"+i).selectAll("*").remove();
+			});
+
+	if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
+			// These are doing it for all three whether in view or not - could just select one needed only?!?!
+			xPosition = [];
+
+			d3.selectAll(".chart")
+				.selectAll("#" + selectedID) // was   dvc.selectedarea
+				.each(function(){
+							xPosition.push(d3.select(this).attr("x"))
+						});
+						//console.log(xPosition);  // The 3 x positions??
+
+
+			d3.selectAll(".chart") // all three
+				.each(function(d,i){
+					sectionName = d3.select(this.parentNode).attr("id");
+	//console.log(barchartWidth*3/4, xPosition[i]);
+					d3.select(this).select(".selectedareaText")
+						.attr("x", function(){ 										// plus US
+												if (xPosition[i] > barchartWidth*3/4) { 
+														return (xPosition[i]) - barchartWidth/2; }
+												 else { return (+xPosition[i]) + 8; }
+						})
+						.attr("y",-7)
+						.style("display", "block")
+						.text(function(d,j){
+								//tabSpec = "Total"+sectionName; console.log(tabSpec);
+								var tradeVal = graphic_data.filter(function(v){
+																				return v.AREACD == selectedID;
+																			});
+
+								return selectedName + ": £" + d3.format(dvc.essential.dataFormats)(tradeVal[0][sectionName]) + "m";
+						})
+						.style("fill", function(d){
+								//console.log(d);
+								if(d.EU === "TRUE") { return "#FF9933"; }
+												else { return "#5F7682"; }
+									});
+
+							boxText = d3.select(this).select('text.selectedareaText');
+							//boxTextin = boxText[0].map(function(d) { /*console.log(d);*/ return d.innerHTML; } );
+
+							//createBackRect(boxText[0][0]);
+				})
+
+			
+			//var exportData = bars.Allexport;
+			var exportFor = bars.Totalexport.filter(function(dat) {// console.log(dat);
+																return dat.name == selectedID;
+													});
+
+		zoomto(selectedID);
+		}
+		
+		updateBars(selectedID, selectedName); // only needs ID
+
+} // end highlight area
+
+
+function createBackRect(boxMe) { console.log(boxMe);
+
+							var BBox = boxMe.getBBox();
+							var boxin = d3.select('text.selectedareaText');
+
+									svg.insert("rect", boxin) //".annotext" + (i))
+										.attr("width", BBox.width)
+										.attr("height", BBox.height)
+										.attr("x", BBox.x)
+										.attr("y", BBox.y)
+										.attr("fill", "white")
+										.attr("opacity", 1);
+
+							}; // end function createBackRect()
+
+
+function unhighlight() { //console.log(" ƒ unhighlight");
+
+			d3.selectAll(".allbars")
+				.attr("fill", function(d){
+								if(d.EU === "TRUE") { return "#FF9933"; }
+												else { return "#5F7682"; }
+						})
+				.attr("opacity","0.3")
+				.attr("width", 1.5)
+				.transition()
+				.attr("y",0)
+				.transition()
+				.attr("height", height);
+				
+			
+
+//			d3.selectAll("."+dvc.essential.highlight)
+//					.attr("fill","#2c71b8")
+//					.attr("opacity","1")
+//					.attr("width","2")
+//					.attr("y",-10)
+//					.attr("height", 40)
+
+			d3.selectAll(".selectedareaText")
+						.style("display", "none")
+
+			$("#areaselect").val("");
+			$("#areaselect").trigger("chosen:updated");
+
+}
+
+
+function removeFigures() { //console.log(" ƒ removeFigures");
+
+		d3.selectAll(".bar").remove();
+		
+		d3.selectAll(".tablink")
+				.html(function(d,i){
+					//names.forEach(function(d,j){
+					if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
+								return '<p class = "tparaTx">' + names[i] + ' balance</p><p class="totalTrade" id = ' + "tpara"+i + '></p>' }
+					else { 		return '<p class = "tparaTx">' + names[i] + '</p><p class="totalTrade" id = ' + "tpara"+i + '></p>' }
+													});
+}
+
+
+
+
+function updateBars(countryID, countryNM){ //console.log("ƒ updateBars data recieved:"); console.log(countryID, countryNM);
+
+	var goodsBalance = graphic_data.filter(function(da) {
+							return da.AREACD == countryID;
+						});
+			//console.log(goodsBalance);
+
+//	names.forEach(function(d,i){
+//	var buton = d3.select(".tablinkClicked").attr("id");
+//	var d = buton.substring(3,11);
+//				function isit(ele){
+//								return ele == d;
+//								}
+//	
+//	i = ["Total", "Goods", "Services"].findIndex(isit);
+	//console.log(i,d);
+			
+names.forEach(function(d,i){	
+												
+		var sectionData1 = bars[d+"import"];  //console.log(sectionData1);
+			var idData1 = sectionData1.filter(function(dat) {// console.log(dat);
+				return dat.name == countryID;
+			});
+
+			var sectionData2 = bars[d+"export"];
+			idData2 = sectionData2.filter(function(dat2) {
+				return dat2.name == countryID;
+			});
+			//console.log(idData2[0]);
+			idData = d3.zip(idData1, idData2);		
+			
+
+     	var allcharts = d3.select("#chartBox"+i).select("g#stopSelect"+i )
+						.attr("class","bars")
+						.selectAll('rect')
+						.data(idData[0]); // strips first array housing to provide object only
+
+			allcharts.exit().remove();
+
+            allcharts.enter().append('rect');
+
+
+            allcharts.attr('class', function(val,k){  
+									if(k == 1) { return 'bar bar_pos'}
+								 		  else { return 'bar bar_neg'}
+              			})
+						.attr("width", function(d,i) {
+													//console.log(d[i] );
+													return x2(+d.amt) - x2(0); })
+						 .attr("x", function(d,i) { if(i==0) {
+							 									//console.log(x2(0)- (x2(+d.amt) - x2(0)));
+							 									return x2(0)- (x2(+d.amt) - x2(0)); }
+														 else {
+															 	//console.log("single ",x2(0));
+																return x2(0); }
+														 })
+						// .attr("y", function(d,i) {  return y("imports"); })
+//						 								if(i==0) {return y("imports"); }
+//														else {return y("exports"); }
+//														})
+						.attr("opacity", function(d,i) { if(i==1) return 0.7; })
+						.attr("height", y.rangeBand())
+						.attr("transform", "translate(" + (dvc.half + margin.left - x2(0)) + "," + (height*0.1) + ")");
+						
+						
+			// Update Trade deficit/Surplus figures on chart
+//				var rankN = d3.select("#chartBox"+i).select("g#stopSelect"+i ).select(".bar.bar_neg"); 
+//				var rankNeg = rankN[0][0];
+//				var rankNegx = d3.select(rankNeg).attr("x");
+//				
+//				var rankP = d3.select("#chartBox"+i).select("g#stopSelect"+i ).select(".bar.bar_pos"); 
+//				var rankPos = rankP[0][0];
+//				var rankPosx = d3.select(rankPos).attr("x");
+//				var rankPosWid = d3.select(rankPos).attr("width");
+				
+				//console.log(rankP, rankPosx, rankPosWid);
+				//d3.select("#chartBox"+i).selectAll(".rankVal").remove();
+				d3.select("#tradedeficit"+i).select(".tdamt").select('text').remove();
+				d3.select("#tradesurplus"+i).select(".tsamt").select('text').remove();
+				
+				//console.log(i,d, idData1[i].amt, idData2[i].amt);
+
+							d3.select("#tradedeficit"+i).select(".tdamt")
+										.text(function(){ return "£"+ d3.format(dvc.essential.dataFormats)(idData1[0].amt) +"m "; })
+										.append('span')
+										.append('text')
+										.style("font-weight", 400)
+										.attr("text-align", "right")
+										.text("Imported");
+										
+							d3.select("#tradesurplus"+i).select(".tsamt")
+										//.text(function(){ return "Rank #" + idData2[0].rank; });
+										.text(function(){ return " £"+ d3.format(dvc.essential.dataFormats)(idData2[0].amt) +"m"; });
+									
+
+
+	if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
+		
+		// If rank Total used
+										
+										
+	// Total  Total  Total  Total  Total  Total  
+		if(d != "Total"){ // console.log("changes only for goods and services");  console.log(d); 
+		
+	// now for the top GOODS and SERVICES  *************************************
+		d3.select("#topservice"+i).selectAll("*").remove();
+		
+	//  if(d != "Total" && parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
+													
+											var impServ = bars["top" + d + "imported"];  //console.log(d, impServ);
+												var importGS = impServ.filter(function(dat) {// console.log(dat);
+													return dat.name == countryID;
+												});
+						
+											var exServ = bars["top" + d + "exported"];  //console.log(sectionData1);
+												var exportGS = exServ.filter(function(dat) {// console.log(dat);
+													return dat.name == countryID;
+												});
+												console.log(importGS[0], exportGS[0]);
+						
+									// Adds top services PUT SOMEWHERE ELSE
+									if(importGS[0].amt != "null") {
+												 d3.selectAll("#topservice"+i)
+																	.append('div')
+																	//.style('background-color', '#fefafe')
+																	.style('width', (dvc.half + margin.left - 10) +"px") // for padding
+																	.attr("id", "topGSleft")
+																	.text('Top '+d+ " imported: ")
+																	.append('tspan')
+																	.text(importGS[0].amt);
+											};
+						
+								  if(exportGS[0].amt != "null") {
+												d3.selectAll("#topservice"+i)
+																	.append('div')
+																	//.style('background-color', '#fafefe')
+																	.style('width', (dvc.half - margin.left - 10) +"px")
+																	.attr("id", "topGSright")
+																	.text('Top '+d)
+																	.append('tspan')
+																	.text(" exported: " + exportGS[0].amt);
+											};
+											
+			// Add rank ??
+			if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) { //console.log(i, d);
+				
+				d3.select("#chartBox"+i).selectAll(".rankText")/*.selectAll("text")*/.remove();
+				
+					d3.select("#chartBox"+i).append("text")
+									.attr('id', "rankImport")
+									.attr('class', 'rankText')
+									.attr('x', x2(-80000))
+									.attr('y', 30)
+									.attr("text-anchor", "start")
+									//.text(function(){ return "Rank #" + idData2[0].rank; });
+									.text(function(){ return "Rank#" + importGS[0].rank });
+									
+					d3.select("#chartBox"+i).append("text")
+									.attr('id', "rankExport")
+									.attr('class', 'rankText')
+									.attr('x', x2(110000))
+									.attr('y', 30)
+									.attr("text-anchor", "end")
+									//.text(function(){ return "Rank #" + idData2[0].rank; });
+									.text(function(){ return "Rank#" + exportGS[0].rank });
+										
+			}
+											
+					// Add rank to Im / Ex divs
+					//d3.select("#tradedeficit").insert("span").append('text').text("Rank #"+10);
+					//d3.select("#tradesurplus").append("span").append('text').text("Rank #"+12);
+					
+		}// ends  ! "all"
+	
+
+  // Deal with top para
+        d3.select('#topPara').html(function(){
+                    if (goodsBalance[0]["Total"] < 0) { 	var	tradeDefSurp = " million trade deficit";
+                                      var	weDefSur = "we import more than we export";
+                                  } else {var	tradeDefSurp = " million trade surplus";
+                                      var	weDefSur = "we export more than we import"; }
+
+                    	 if (goodsBalance[0]["Goods"] < 0 && goodsBalance[0]["Services"] < 0) {
+                                        var	tradeDefSurpGoods = " million trade deficit in Goods",
+                                        	weDefSurServ = " deficit",
+											offset = " and";
+											//console.log("-G -S");
+                  } else if (goodsBalance[0]["Goods"] < 0 && goodsBalance[0]["Services"] >= 0) {
+                                        var	tradeDefSurpGoods = " million trade deficit in Goods",
+                                        	weDefSurServ = " surplus",
+											offset = " which is offset by";
+											//console.log("-G +S",weDefSurServ);
+                  } else if (goodsBalance[0]["Goods"] >= 0 && goodsBalance[0]["Services"] < 0) {
+                                        var	tradeDefSurpGoods = " million trade surplus in Goods",
+                                        	weDefSurServ = " deficit",
+											offset = " which is offset by";
+											//console.log("+G -S");
+                  } else {				var	tradeDefSurpGoods = " million trade surplus in Goods",
+                                    		weDefSurServ = " surplus",
+											offset = " and";
+											//console.log("+G +S");
+                      }
+		if(countryNM == "United States inc Puerto Rico" || countryNM == "United States of America") countryNM = "US inc Puerto Rico";
+		
+        return '<p>The UK has a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Total"])) + tradeDefSurp +' with ' + countryNM + ', which means ' + weDefSur + '.</p> <p>We have a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Goods"])) + tradeDefSurpGoods + offset + ' a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Services"])) + weDefSurServ + ' in Services.</p>';
+              });
+
+
+		} // ends if mob >
+
+	}) // ends forEach names
+	
+
+
+	// Update the tab values
+			d3.select("#tpara0").text(function(){
+												if(goodsBalance[0].Total >=0){
+												d3.select("#tpara0").style("color", "#2471a3");
+										  		return  "£"+d3.format(dvc.essential.dataFormats)(goodsBalance[0].Total)/* + "M surplus"*/; }
+										else{ 	d3.select("#tpara0").style("color", "#5F7682");
+											if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
+												return "£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Total)))/* + "M deficit"*/; }
+											else { return "-£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Total)))/* + "M deficit"*/; } 
+										}
+												})
+
+			d3.select("#tpara1").text(function(){
+												if(goodsBalance[0].Goods >=0){
+												d3.select("#tpara1").style("color", "#2471a3");
+										  		return  "£"+d3.format(dvc.essential.dataFormats)(goodsBalance[0].Goods)/* + "M surplus"*/; }
+										else{ 	d3.select("#tpara1").style("color", "#5F7682");
+												if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
+												return "£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Goods)))/* + "M deficit"*/; }
+											else { return "-£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Goods)))/* + "M deficit"*/; } 
+										}
+												})
+
+			d3.select("#tpara2").text(function(){
+												if(goodsBalance[0].Services >=0){
+												d3.select("#tpara2").style("color", "#2471a3");
+										  		return  "£"+d3.format(dvc.essential.dataFormats)(goodsBalance[0].Services)/* + "M surplus"*/; }
+										else{ 	d3.select("#tpara2").style("color", "#5F7682");
+												if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
+												return "£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Services)))/* + "M deficit"*/; }
+											else { return "-£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Services)))/* + "M deficit"*/; } 
+										}
+												})
+
+		if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
+
+			if(goodsBalance[0].Total >=0){
+					d3.select("#tpara0").append('text').text("m surplus"); }
+			 else { d3.select("#tpara0").append('text').text("m deficit"); }
+
+			 if(goodsBalance[0].Goods >=0){
+					d3.select("#tpara1").append('text').text("m surplus"); }
+			 else { d3.select("#tpara1").append('text').text("m deficit"); }
+
+			 if(goodsBalance[0].Services >=0){
+					d3.select("#tpara2").append('text').text("m surplus"); }
+			 else { d3.select("#tpara2").append('text').text("m deficit"); }
+
+		}
+
+
+} // ends updateBars
+
+
+
+
+if (Modernizr.svg) {
+   //load config
+	d3.json("data/config.json", function(error, config) {
+	dvc = config;
+
+		//load chart data
+		d3.csv( dvc.essential.graphic_data_url, function(error, data) {
+				graphic_data = data;
+				//console.log(graphic_data);
+						d3.csv( dvc.essential.graphic_data_url2, function(error, data2) {
+							bar_data = data2;
+
+				topProducts = d3.keys(/*data*/bar_data[0])
+							.filter(function(key) {
+								return key !== "AREACD" && key !== "Totalexport" && key !== "Totalimport" && key !== "Goodsexport" && key !== "Goodsimport" && key !== "Servicesexport" && key !== "Servicesimport";
+							});
+
+				names = d3.keys(/*data*/graphic_data[0])
+							.filter(function(key) {
+								return key !== "AREACD" && key !== "AREANM" && key !== "EU";
+							});
+
+				//use pym to create iframed chart dependent on specified variables
+				pymChild = new pym.Child({ renderCallback: createStructure});
+			});
+			});
+	})
+
+} else {
+	 //use pym to create iframe containing fallback image (which is set as default)
+	 pymChild = new pym.Child();
+	if (pymChild) {
+		pymChild.sendHeight();
+	}
+}
+
+		</script>
+
+
+  </body>
+</html>

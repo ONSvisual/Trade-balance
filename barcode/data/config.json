@@ -1,0 +1,33 @@
+{
+"essential" : {
+            "graphic_data_url": "data/data.csv",
+            "graphic_data_url2": "data/impexp_data.csv",
+            "sourceText": ["Trade"],
+            "sourceURL": ["https://www.ons.gov.uk"],
+            "highlight": "England",
+            "chartTitles":[
+				"Balance:",
+				"Goods:",
+				"Services:"
+			],
+			"dataFormats": ",.0f",
+        
+        "xAxisScale": [-100000, 100000],
+        "height_sm_md_lg" : [100,100,100],
+        "dateFormat":"%Y",
+        "xAxisLabel":"£ millions"
+   
+    },
+    "optional" : {
+            "margin_sm": [20, 0, 20, 40],
+            "margin_md": [20, 0, 20, 40],
+            "margin_lg": [20, 0, 20, 40],
+        
+        "x_num_ticks_sm_md_lg" : [5,5,11],
+        "aspectRatio_sm" : [4,7],
+        "aspectRatio_md" : [4,7],
+        "aspectRatio_lg" : [16,10],
+        
+            "mobileBreakpoint" : 600
+    }
+}
