@@ -27,14 +27,14 @@
 			margin:0px auto;
 
 		}
-		
+
 		#wrapper
 		{
 			position:relative;
 			width:100%;
 			display:block;
 		}
-		
+
 		#selectNav p{
 			padding-bottom:8px;
 		}
@@ -132,7 +132,7 @@
 							position:relative;
 							font-size: 18px;
 							font-weight: 600;
-							
+
 							/*color:#666;*/
 						}
 
@@ -189,7 +189,7 @@
 									color:#124D80;
 									margin: 0px 10px 0px 10px;
 									}
-									
+
 									#infoKey{
 										display: block;
 										line-height: 40px;
@@ -246,7 +246,7 @@
 									font-weight: 600;
 									text-align:right;
 								}
-								
+
 									.imexFigure,.rankVal{
 													fill: #fafafa;
 													font-size:18px;
@@ -256,7 +256,7 @@
 													font-size:18px;
 													font-weight: 400;
 														}
-														
+
 							#tradedeficit.rankValIE{
 									fill: #303B41;
 								}
@@ -298,7 +298,7 @@
 					font-weight:500;
 					fill:#124D80;
 				}
-				
+
 			.topServices{
 				height:50px;
 				font-size:16px;
@@ -654,8 +654,8 @@ function createStructure(){ // console.log(names, bar_data);
 								//.append('p')
 								//.append('html')
 								.html('<p>Use the dropdown above or the map on the right to select a country to view trade balances.</p> <p>Alternatively explore the barcode chart below by rolling over the lines that represent each country in the world.</p>');
-								
-								
+
+
 
 			////   Adds the 3 big divs for to house all the content, v.!
 			graphic.selectAll("*").remove();
@@ -824,7 +824,7 @@ console.log(bars);
 												if(d3.min(oneBar) < mini) mini = d3.min(oneBar);
 												if(d3.max(oneBar) > maxi) maxi = d3.max(oneBar);
 							});
-							
+
 
 			   x.domain([-40000,40000])
 				.range([ 0, chart_width * 0.9]);
@@ -883,7 +883,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 				.append('p')
 				.attr('class', 'defsurpTx')
 				.text('export more than import')
-		
+
 
         // Add Balance info. and key
 //          var infoKey = d3.select("#MainInfo")
@@ -892,36 +892,36 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 //							.style('height', 50+"px")
 //							.style('width', barchartWidth +"px");
 
-			
+
 			d3.select("#infoKey").style('height', 40+"px").style('width', barchartWidth);
-			
+
 			d3.select("#infoKey").append("div")
 							   .attr("id", "key")
 							   .style('width', dvc.half+margin.left-1/*barchartWidth*/ +"px")
 							   .style('height', 40+"px");
-							   
+
 			d3.select("#infoKey").append("div")
 							   .attr("id", "keyRight")
 							   .style('width', barchartWidth - (dvc.half+margin.left-1) +"px")
 							   .style('height', 40+"px");
-							   
+
 				  d3.select("#key").append('text')
 									   .style("color", "#ff9933")
 									   .text('| EU countries')
 									   .append('tspan')
 									   .style("color", "#5F7682")
 									   .text(' | Rest of the world');
-									   
+
 			} else {
 				d3.select("#infoKey").style('height', 40+"px").style('width', barchartWidth);
-				
+
 				 d3.select("#infoKey").append('text')
 									   .style("color", "#ff9933")
 									   .text('| EU countries')
 									   .append('tspan')
 									   .style("color", "#5F7682")
 									   .text(' | Rest of the world');
-				
+
 			}
 
 // Add meridian to each tab page
@@ -978,11 +978,11 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 													})
 									.on("click", function() { 	d3.selectAll(".tablink").classed("tablinkClicked", false);
 																d3.selectAll(".tablink").classed("tablinkNotClicked", true);
-																
+
 									// put it back
 									//if(type1==="Total trade") type1 = "Total";
-																
-//				var rankP = d3.select("#chartBox"+i).select("g#stopSelect"+i ).select(".bar.bar_pos"); 
+
+//				var rankP = d3.select("#chartBox"+i).select("g#stopSelect"+i ).select(".bar.bar_pos");
 //				var rankPos = rankP[0][0];
 //				var rankPosx = d3.select(rankPos).attr("x");
 //				var rankPosWid = d3.select(rankPos).attr("width");
@@ -1136,7 +1136,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 										.style("font-weight", 400)
 										.attr("text-align", "right")
 										.text("Imported");
-										
+
 										//d3.select("#tradedeficit").select(".tdamt").select('text').remove();
 
 
@@ -1214,7 +1214,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 //									}
 //							})
 				        .call(yAxis);
-						
+
 
 //console.log(bars["Totalexport"][0].amt, x2(bars["Totalexport"][0].amt))
 
@@ -1258,7 +1258,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 			d3.selectAll("g.x.axis").select("path.domain").remove();
 			d3.selectAll("g.x2.axis").select("path.domain").remove();
 
-			
+
 } //end drawGraphic
 
 
@@ -1279,7 +1279,7 @@ function openPage(pageName, elmnt) { // console.log(pageName);
 
 							  // Show the specific tab content
 							  document.getElementById(pageName).style.display = "block";
-							  
+
 	}
 
 
@@ -1287,7 +1287,7 @@ function openPage(pageName, elmnt) { // console.log(pageName);
 function addMap(){
 
 				d3.json("data/worldjson8.json", function(error, geog){
-					
+
 					mapHeight = 190;
 
 				 	svg = d3.select("#map")
@@ -1421,9 +1421,9 @@ function zoomed() {  // console.log("ƒ zoomed");
 function clicked(d) { //console.log("ƒ clicked, data recieved:");
 
 				// if (active.node() === this){ return reset(); } //never goes there
-				
+
 				//d3.select("#graphic").style("pointer-events", "none");
-        
+
 
 				   d3.select(".active").classed("active",false); // get last active country
 
@@ -1443,16 +1443,16 @@ function clicked(d) { //console.log("ƒ clicked, data recieved:");
 
 					// change chosen country label
 					highlight(d.properties.fips, d.properties.name); // d
-					
+
 		// if country selected & cross has been removed - reset map and remove all data from charts.
 		// shut off pointer on barcode
         //if(d3.select(".chosen-single-with-deselect").classed("chosen-default") === true ) {  console.log("go reset");  return reset(); };
 		//if(d3.select(".search-choice-close") == false) {  console.log("go reset");  return reset(); };
-		
+
 		//$(".chosen-single-with-deselect").find("[abbr='search-choice-close']").contents().filter(function () {
     //select only text nodes of the targetted td element
    // return this.nodeType == 3; });
-	
+
  }
 
 
@@ -1489,7 +1489,7 @@ function highlight(/*chartType,*/ selectedID, selectedName) {//console.log("ƒ h
 					//.transition()
 					//.attr("height", height+10)
 			//}
-			
+
 			$("#areaselect").val(selectedID);
 			$("#areaselect").trigger("chosen:updated");
 
@@ -1515,7 +1515,7 @@ function highlight(/*chartType,*/ selectedID, selectedName) {//console.log("ƒ h
 	//console.log(barchartWidth*3/4, xPosition[i]);
 					d3.select(this).select(".selectedareaText")
 						.attr("x", function(){ 										// plus US
-												if (xPosition[i] > barchartWidth*3/4) { 
+												if (xPosition[i] > barchartWidth*3/4) {
 														return (xPosition[i]) - barchartWidth/2; }
 												 else { return (+xPosition[i]) + 8; }
 						})
@@ -1541,7 +1541,7 @@ function highlight(/*chartType,*/ selectedID, selectedName) {//console.log("ƒ h
 							//createBackRect(boxText[0][0]);
 				})
 
-			
+
 			//var exportData = bars.Allexport;
 			var exportFor = bars.Totalexport.filter(function(dat) {// console.log(dat);
 																return dat.name == selectedID;
@@ -1549,7 +1549,7 @@ function highlight(/*chartType,*/ selectedID, selectedName) {//console.log("ƒ h
 
 		zoomto(selectedID);
 		}
-		
+
 		updateBars(selectedID, selectedName); // only needs ID
 
 } // end highlight area
@@ -1584,8 +1584,8 @@ function unhighlight() { //console.log(" ƒ unhighlight");
 				.attr("y",0)
 				.transition()
 				.attr("height", height);
-				
-			
+
+
 
 //			d3.selectAll("."+dvc.essential.highlight)
 //					.attr("fill","#2c71b8")
@@ -1606,7 +1606,7 @@ function unhighlight() { //console.log(" ƒ unhighlight");
 function removeFigures() { //console.log(" ƒ removeFigures");
 
 		d3.selectAll(".bar").remove();
-		
+
 		d3.selectAll(".tablink")
 				.html(function(d,i){
 					//names.forEach(function(d,j){
@@ -1632,12 +1632,12 @@ function updateBars(countryID, countryNM){ //console.log("ƒ updateBars data rec
 //				function isit(ele){
 //								return ele == d;
 //								}
-//	
+//
 //	i = ["Total", "Goods", "Services"].findIndex(isit);
 	//console.log(i,d);
-			
-names.forEach(function(d,i){	
-												
+
+names.forEach(function(d,i){
+
 		var sectionData1 = bars[d+"import"];  //console.log(sectionData1);
 			var idData1 = sectionData1.filter(function(dat) {// console.log(dat);
 				return dat.name == countryID;
@@ -1648,8 +1648,8 @@ names.forEach(function(d,i){
 				return dat2.name == countryID;
 			});
 			//console.log(idData2[0]);
-			idData = d3.zip(idData1, idData2);		
-			
+			idData = d3.zip(idData1, idData2);
+
 
      	var allcharts = d3.select("#chartBox"+i).select("g#stopSelect"+i )
 						.attr("class","bars")
@@ -1661,7 +1661,7 @@ names.forEach(function(d,i){
             allcharts.enter().append('rect');
 
 
-            allcharts.attr('class', function(val,k){  
+            allcharts.attr('class', function(val,k){
 									if(k == 1) { return 'bar bar_pos'}
 								 		  else { return 'bar bar_neg'}
               			})
@@ -1682,23 +1682,23 @@ names.forEach(function(d,i){
 						.attr("opacity", function(d,i) { if(i==1) return 0.7; })
 						.attr("height", y.rangeBand())
 						.attr("transform", "translate(" + (dvc.half + margin.left - x2(0)) + "," + (height*0.1) + ")");
-						
-						
+
+
 			// Update Trade deficit/Surplus figures on chart
-//				var rankN = d3.select("#chartBox"+i).select("g#stopSelect"+i ).select(".bar.bar_neg"); 
+//				var rankN = d3.select("#chartBox"+i).select("g#stopSelect"+i ).select(".bar.bar_neg");
 //				var rankNeg = rankN[0][0];
 //				var rankNegx = d3.select(rankNeg).attr("x");
-//				
-//				var rankP = d3.select("#chartBox"+i).select("g#stopSelect"+i ).select(".bar.bar_pos"); 
+//
+//				var rankP = d3.select("#chartBox"+i).select("g#stopSelect"+i ).select(".bar.bar_pos");
 //				var rankPos = rankP[0][0];
 //				var rankPosx = d3.select(rankPos).attr("x");
 //				var rankPosWid = d3.select(rankPos).attr("width");
-				
+
 				//console.log(rankP, rankPosx, rankPosWid);
 				//d3.select("#chartBox"+i).selectAll(".rankVal").remove();
 				d3.select("#tradedeficit"+i).select(".tdamt").select('text').remove();
 				d3.select("#tradesurplus"+i).select(".tsamt").select('text').remove();
-				
+
 				//console.log(i,d, idData1[i].amt, idData2[i].amt);
 
 							d3.select("#tradedeficit"+i).select(".tdamt")
@@ -1708,37 +1708,37 @@ names.forEach(function(d,i){
 										.style("font-weight", 400)
 										.attr("text-align", "right")
 										.text("Imported");
-										
+
 							d3.select("#tradesurplus"+i).select(".tsamt")
 										//.text(function(){ return "Rank #" + idData2[0].rank; });
 										.text(function(){ return " £"+ d3.format(dvc.essential.dataFormats)(idData2[0].amt) +"m"; });
-									
+
 
 
 	if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
-		
+
 		// If rank Total used
-										
-										
-	// Total  Total  Total  Total  Total  Total  
-		if(d != "Total"){ // console.log("changes only for goods and services");  console.log(d); 
-		
+
+
+	// Total  Total  Total  Total  Total  Total
+		if(d != "Total"){ // console.log("changes only for goods and services");  console.log(d);
+
 	// now for the top GOODS and SERVICES  *************************************
 		d3.select("#topservice"+i).selectAll("*").remove();
-		
+
 	//  if(d != "Total" && parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
-													
+
 											var impServ = bars["top" + d + "imported"];  //console.log(d, impServ);
 												var importGS = impServ.filter(function(dat) {// console.log(dat);
 													return dat.name == countryID;
 												});
-						
+
 											var exServ = bars["top" + d + "exported"];  //console.log(sectionData1);
 												var exportGS = exServ.filter(function(dat) {// console.log(dat);
 													return dat.name == countryID;
 												});
 												console.log(importGS[0], exportGS[0]);
-						
+
 									// Adds top services PUT SOMEWHERE ELSE
 									if(importGS[0].amt != "null") {
 												 d3.selectAll("#topservice"+i)
@@ -1750,7 +1750,7 @@ names.forEach(function(d,i){
 																	.append('tspan')
 																	.text(importGS[0].amt);
 											};
-						
+
 								  if(exportGS[0].amt != "null") {
 												d3.selectAll("#topservice"+i)
 																	.append('div')
@@ -1761,12 +1761,12 @@ names.forEach(function(d,i){
 																	.append('tspan')
 																	.text(" exported: " + exportGS[0].amt);
 											};
-											
+
 			// Add rank ??
 			if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) { //console.log(i, d);
-				
+
 				d3.select("#chartBox"+i).selectAll(".rankText")/*.selectAll("text")*/.remove();
-				
+
 					d3.select("#chartBox"+i).append("text")
 									.attr('id', "rankImport")
 									.attr('class', 'rankText')
@@ -1775,7 +1775,7 @@ names.forEach(function(d,i){
 									.attr("text-anchor", "start")
 									//.text(function(){ return "Rank #" + idData2[0].rank; });
 									.text(function(){ return "Rank#" + importGS[0].rank });
-									
+
 					d3.select("#chartBox"+i).append("text")
 									.attr('id', "rankExport")
 									.attr('class', 'rankText')
@@ -1784,15 +1784,15 @@ names.forEach(function(d,i){
 									.attr("text-anchor", "end")
 									//.text(function(){ return "Rank #" + idData2[0].rank; });
 									.text(function(){ return "Rank#" + exportGS[0].rank });
-										
+
 			}
-											
+
 					// Add rank to Im / Ex divs
 					//d3.select("#tradedeficit").insert("span").append('text').text("Rank #"+10);
 					//d3.select("#tradesurplus").append("span").append('text').text("Rank #"+12);
-					
+
 		}// ends  ! "all"
-	
+
 
   // Deal with top para
         d3.select('#topPara').html(function(){
@@ -1822,7 +1822,7 @@ names.forEach(function(d,i){
 											//console.log("+G +S");
                       }
 		if(countryNM == "United States inc Puerto Rico" || countryNM == "United States of America") countryNM = "US inc Puerto Rico";
-		
+
         return '<p>The UK has a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Total"])) + tradeDefSurp +' with ' + countryNM + ', which means ' + weDefSur + '.</p> <p>We have a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Goods"])) + tradeDefSurpGoods + offset + ' a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Services"])) + weDefSurServ + ' in Services.</p>';
               });
 
@@ -1830,7 +1830,7 @@ names.forEach(function(d,i){
 		} // ends if mob >
 
 	}) // ends forEach names
-	
+
 
 
 	// Update the tab values
@@ -1841,7 +1841,7 @@ names.forEach(function(d,i){
 										else{ 	d3.select("#tpara0").style("color", "#5F7682");
 											if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
 												return "£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Total)))/* + "M deficit"*/; }
-											else { return "-£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Total)))/* + "M deficit"*/; } 
+											else { return "-£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Total)))/* + "M deficit"*/; }
 										}
 												})
 
@@ -1852,7 +1852,7 @@ names.forEach(function(d,i){
 										else{ 	d3.select("#tpara1").style("color", "#5F7682");
 												if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
 												return "£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Goods)))/* + "M deficit"*/; }
-											else { return "-£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Goods)))/* + "M deficit"*/; } 
+											else { return "-£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Goods)))/* + "M deficit"*/; }
 										}
 												})
 
@@ -1863,7 +1863,7 @@ names.forEach(function(d,i){
 										else{ 	d3.select("#tpara2").style("color", "#5F7682");
 												if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
 												return "£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Services)))/* + "M deficit"*/; }
-											else { return "-£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Services)))/* + "M deficit"*/; } 
+											else { return "-£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Services)))/* + "M deficit"*/; }
 										}
 												})
 
