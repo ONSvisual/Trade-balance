@@ -1779,7 +1779,7 @@ names.forEach(function(d,i){
 						return dat.name == countryID;
 					});
 
-					console.log(imrankGS[0].rank, exrankGS[0].rank);
+					//console.log(imrankGS[0].rank, exrankGS[0].rank);
 
 					d3.select("#chartBox"+i).selectAll(".rankText")/*.selectAll("text")*/.remove();
 
@@ -1790,7 +1790,7 @@ names.forEach(function(d,i){
 									.attr('y', 30)
 									.attr("text-anchor", "start")
 									//.text(function(){ return "Rank #" + idData2[0].rank; });
-									.text(function(){ return "Rank#" + importGS[0].rank });
+									.text(function(){ return "Rank#" + imrankGS[0].rank });
 
 					d3.select("#chartBox"+i).append("text")
 									.attr('id', "rankExport")
@@ -1799,7 +1799,7 @@ names.forEach(function(d,i){
 									.attr('y', 30)
 									.attr("text-anchor", "start")
 									//.text(function(){ return "Rank #" + idData2[0].rank; });
-									.text(function(){ return "Rank#" + exportGS[0].rank });
+									.text(function(){ return "Rank#" + exrankGS[0].rank });
 
 			}
 
