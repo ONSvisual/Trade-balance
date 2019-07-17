@@ -297,7 +297,7 @@
 
 				.rankText{
 					font-size:14px;
-					font-weight:500;
+					font-weight:700;
 					fill:#124D80;
 				}
 
@@ -831,11 +831,11 @@ function drawGraphic(names){
 
 
 			   x.domain([-40000,40000])
-				.range([ 0, chart_width * 0.9]);
+				.range([ 0, chart_width * 0.95]);
 
 				// So to balance the '0'
-				dvc.half = x(0) * 1;
-				x2.range([0, dvc.half * 1.8]); //(barchartWidth * 0.8) - ylabelGap ]); *2 would be too much
+				dvc.half = x(0);
+				x2.range([ 0, chart_width * 0.93]);  // ([0, dvc.half * 1.8]); //(barchartWidth * 0.8) - ylabelGap ]); *2 would be too much
 
 
 		 // sort out map buttons
@@ -859,7 +859,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 
 			arrows.append("div")
                 .attr("class", "deficit ")
-				.style('width', (dvc.half + margin.left - 10 -1) +"px")
+				.style('width', (dvc.half + margin.left - 11) +"px")
 				.append('p')
 				.append('text')
 				.text('Deficit')
@@ -869,7 +869,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 
 			arrows.append("div")
                 .attr("class", "surplus")
-				.style('width', (dvc.half - 10)+"px")
+				.style('width', dvc.half - 20) //chart_width - (dvc.half + margin.left - 11) +"px")
 				.append('p')
 				.append('text')
 				.text('Surplus')
@@ -1524,8 +1524,11 @@ function highlight(chartType, selectedID, selectedName) {//console.log("ƒ highl
 								var tradeVal = graphic_data.filter(function(v){
 																				return v.AREACD == selectedID;
 																			});
-
+									if(tradeVal[0][sectionName] > 0){
 								return selectedName + ": £" + d3.format(dvc.essential.dataFormats)(tradeVal[0][sectionName]) + "m";
+						}else {
+								return selectedName + ": -£" + eval(d3.format(dvc.essential.dataFormats)(tradeVal[0][sectionName])) + "m";
+						}
 						})
 						.style("fill", function(d){
 								//console.log(d);
