@@ -323,6 +323,7 @@
 		.selectedareaText{
 			font-size:18px;
 			font-weight:600;
+			color: #124D80;
 		}
 
 
@@ -833,7 +834,7 @@ function drawGraphic(names){
 
 				// So to balance the '0'
 				dvc.half = x(0);
-				x2.range([ 0, chart_width * 0.93]);  // ([0, dvc.half * 1.8]); //(barchartWidth * 0.8) - ylabelGap ]); *2 would be too much
+				x2.range([ 0, chart_width * 0.94]);  // These coefficients size the whole charts and their components.
 
 
 		 // sort out map buttons
@@ -844,7 +845,7 @@ function drawGraphic(names){
 
 
 
-		////	// Draw deficit Surplus
+		// Draw deficit Surplus
 			 var arrows = d3.select("#defsurp")
 			 				 //.style('left', ((dvc.half + margin.left) - (barchartWidth*0.25)) +"px")
 							.style("width", barchartWidth +"px")
@@ -867,7 +868,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 
 			arrows.append("div")
                 .attr("class", "surplus")
-				.style('width', dvc.half - 20) //chart_width - (dvc.half + margin.left - 11) +"px")
+				.style('width', dvc.half - 20) // (dvc.half + margin.left - 11) +"px")
 				.append('p')
 				.append('text')
 				.text('Surplus')
@@ -886,13 +887,6 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 				.attr('class', 'defsurpTx')
 				.text('export more than import')
 
-
-        // Add Balance info. and key
-//          var infoKey = d3.select("#MainInfo")
-//                 			.append('div')
-//				            .attr("class", "infoKey")
-//							.style('height', 50+"px")
-//							.style('width', barchartWidth +"px");
 
 
 			d3.select("#infoKey").style('height', 40+"px").style('width', barchartWidth);
@@ -950,12 +944,10 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 //  *********************************************************************************************************************
 //  *********************************************************************************************************************
 
-		// draw bars for barcode
-		//namesTest = ["Balance"];
+	// draw bars for barcode
 	names.forEach(function(d,i){
 								type1 = d;
 
-		//<  0nclass="tablinks" onclick="openCity(event, 'London')">London</button>
 				tabInd = -1;
 					d3.select("#tabs").append('div')
 										.attr('tabindex', function(){
@@ -1012,21 +1004,6 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 				        .attr("transform", "translate(" + margin.left + "," + (margin.top+2) + ")");
 
 
-			// Summary text
-			// add the top drop line
-/*				svg.append("text") // was myDrop when inside rapper
-					.attr("id", function(){
-						return "dropLine"+i;
-					})
-					.attr("class", "dropLines")
-					.attr("x",10)
-					.attr("y",0)
-					.text("Roll over barcode")
-*/					//.style("display", "none");
-
-
-											//diff = d3.mean(center) - x(0); console.log(x(0), diff, xoffset)
-
 					svg.append('g')
 						.attr('class', 'x axis')
 						.attr('transform',  'translate(' + 0  + ' ,' + (height + 6)  + ')') // 6px down from barcode
@@ -1035,10 +1012,9 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 
           svg .append("text")
                .attr('class', 'x axis')
-               .attr("y", 45)
-               .attr("x", (dvc.half*2) + margin.left)
+               .attr("y", height+margin.top + 13)
+               .attr("x", chart_width * 0.98 ) //(dvc.half*2) + margin.left)
                .attr("dy", ".71em")
-               .attr("transform", "translate(" + ((dvc.half * 0.9) - x2(0)) + ", "+ (height*0.8) +")")
                .style("text-anchor", "end")
                .text(dvc.essential.xAxisLabel);
 
@@ -1048,7 +1024,6 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 						.enter()
 						.append('rect')
 						.attr("fill", function(d){
-								//console.log(d.EU);
 								if(d.EU === "TRUE") { return "#FF9933"; }
 												else { return "#5F7682"; }
 						})
@@ -1125,7 +1100,6 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 
 
 							var Checkatrade = tradeValues.append("div")
-									//.style("background-color", "#fafafa")
 										.attr("id", function(){ return "tradedeficit" + i })
 										.attr("class", "trade")
 										.style('width', (dvc.half-20) +"px"); // - (barchartWidth*0.25)) );
@@ -1144,15 +1118,18 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 									//.style("background-color", "#f3f3f3")
 										.attr("id", function(){ return "tradesurplus" + i })
 										.attr("class", "trade")
-										.style('width', dvc.half +"px");
+										.style('width', (dvc.half-20) +"px");
+	//.style('width', dvc.half - 20) // (dvc.half + margin.left - 11) +"px")
+
 
 								Checkatrade2/*.append('p')*/
 										.append('text')
-                    .style("font-weight", 400)
-                    .attr('class', "tsamt")
+										.style("font-weight", 400)
+										.attr('class', "tsamt")
 										.html('Exported');
 
 
+		// *******************************************************************************
 		// add the bar chart container
 		var myDrop = d3.select("#"+d);// .append("g");
 
@@ -1214,8 +1191,14 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 //							})
 				        .call(yAxis);
 
+			// remove minus from x-axis
+			//d3.select("#chartBox"+i).select('g.x2.axis').selectAll('text').remove();
+			ticker = d3.select("#chartBox"+i).select('g.x2.axis').selectAll('text');
+					ticker[0].forEach(function(d,i){ console.log(i,d.innerHTML);
+				                 return 40; //d.innerHTML;
+			});
 
-//console.log(bars["Totalexport"][0].amt, x2(bars["Totalexport"][0].amt))
+
 
 						d3.select("#chartBox"+i)
 							.append('rect')
@@ -1238,6 +1221,18 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 
 							// add this for the actual bars so they don't interfer with the ghosts
 							d3.select("#chartBox"+i).append('g').attr('id', 'stopSelect'+i)
+
+						d3.select("#chartBox"+i)
+							 .append("text")
+							 .attr('class', 'x2 axis')
+							 .attr("y", height+margin.top - 3)
+							 .attr("x", function(d) {
+													return x2(bars["Totalexport"][0].amt) - x2(0) + dvc.half + margin.left;
+													 })
+							 .attr("dy", ".71em")
+							 .style("text-anchor", "end")
+							 .text(dvc.essential.xAxisLabel);
+
 
 
 					svg.append('g')
@@ -1526,7 +1521,7 @@ function highlight(chartType, selectedID, selectedName) {//console.log("ƒ highl
 									if(tradeVal[0][sectionName] > 0){
 								return selectedName + ": £" + d3.format(dvc.essential.dataFormats)(tradeVal[0][sectionName]) + "m";
 						}else {
-								return selectedName + ": -£" + d3.format(dvc.essential.dataFormats)(eval((tradeVal[0][sectionName])*-1)) + "m";
+								return selectedName + ": -£" + eval(d3.format(dvc.essential.dataFormats)(tradeVal[0][sectionName])) + "m";
 						}
 						})
 						.style("fill", function(d){
