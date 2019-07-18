@@ -321,10 +321,22 @@
 		}
 
 		.selectedareaText{
-			font-size:18px;
+			/* font-size:18px;
 			font-weight:600;
-			color: #124D80;
+			color: #124D80; */
 		}
+
+    .selectedareaText1{
+      font-size:18px;
+      font-weight:400;
+      fill: #124D80;
+    }
+
+    .selectedareaText2{
+      font-size:18px;
+      font-weight:700;
+      fill: #124D80;
+    }
 
 
 		g.x.axis line, g.x2.axis line{
@@ -901,13 +913,28 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 							   .style('width', barchartWidth - (dvc.half+margin.left-1) +"px")
 							   .style('height', 40+"px");
 
-				  d3.select("#key").append('text')
+			keyitems = d3.select("#key").append('text');
+
+                     keyitems.append('tspan')
 									   .style("color", "#ff9933")
-									   .text('| EU countries')
-									   .append('tspan')
+                     .style("font-weight","900")
+									   .text('| ');
+
+                     keyitems.append('tspan')
+									   .style("color", "#ff9933")
+                     .style("font-weight","400")
+									   .text('EU countries');
+
+                     keyitems.append('tspan')
                      .style("margin-left","15px")
 									   .style("color", "#5F7682")
-									   .text(' | Rest of the world');
+                     .style("font-weight","900")
+									   .text('| ');
+
+                     keyitems.append('tspan')
+                     .style("font-weight","400")
+									   .style("color", "#5F7682")
+									   .text('Rest of the world');
 
 			} else {
 				d3.select("#infoKey").style('height', 40+"px").style('width', barchartWidth);
@@ -1010,7 +1037,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 						.call(xAxis);
 
 
-          svg .append("text")
+          svg.append("text")
                .attr('class', 'x axis')
                .attr("y", height+margin.top + 13)
                .attr("x", chart_width * 0.98 ) //(dvc.half*2) + margin.left)
@@ -1143,7 +1170,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 												return "chartBox"+i;
 											})
 				    .attr("width", barchartWidth + margin.left + margin.right)
-					.attr("height", height + margin.top + margin.bottom); // 10 for the x-axis label
+					.attr("height", height + margin.top + margin.bottom +5); // 10 for the x-axis label
 
 
 			// add the top service imported / exported If needed
@@ -1167,16 +1194,16 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 				        .attr("transform", "translate(" + (dvc.half + margin.left - x2(0)) + ", "+ (height+6) +")")
 				        .call(xAxis2);
 
-					d3.select("#chartBox"+i)
-						 .append("text")
-						 .attr('class', 'x2 axis')
-						 .attr("y", 25)
-						 .attr("x", (dvc.half*2) + margin.left)
-						 .attr("dy", ".71em")
-						 //.attr("transform", "translate(" + (dvc.half - x2(0)) + ", "+ (height*0.8) +")")
-						 .attr("transform", "translate(0, "+ height +")")
-						 .style("text-anchor", "end")
-						 .text(dvc.essential.xAxisLabel);
+					// d3.select("#chartBox"+i)
+					// 	 .append("text")
+					// 	 .attr('class', 'x2 axis')
+					// 	 .attr("y", 25)
+					// 	 .attr("x", (dvc.half*2) + margin.left)
+					// 	 .attr("dy", ".71em")
+					// 	 //.attr("transform", "translate(" + (dvc.half - x2(0)) + ", "+ (height*0.8) +")")
+					// 	 .attr("transform", "translate(0, "+ height +")")
+					// 	 .style("text-anchor", "end")
+					// 	 .text(dvc.essential.xAxisLabel);
 
 
 			//create y axis, if x axis doesn't start at 0 drop x axis accordingly
@@ -1225,7 +1252,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 						d3.select("#chartBox"+i)
 							 .append("text")
 							 .attr('class', 'x2 axis')
-							 .attr("y", height+margin.top - 3)
+							 .attr("y", height+margin.top+13)
 							 .attr("x", function(d) {
 													return x2(bars["Totalexport"][0].amt) - x2(0) + dvc.half + margin.left;
 													 })
@@ -1241,7 +1268,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 						//.attr("x", 4)
 						//.attr("y",56)
 						.style("display", "none")
-						.text("name of area")
+						//.text("name of area")
 
 
 
@@ -1505,30 +1532,43 @@ function highlight(chartType, selectedID, selectedName) {//console.log("ƒ highl
 				.each(function(d,i){
 					sectionName = d3.select(this.parentNode).attr("id");
 	//console.log(barchartWidth*3/4, xPosition[i]);
-					d3.select(this).select(".selectedareaText")
+
+
+
+					selected = d3.select(this).select(".selectedareaText")
 						.attr("x", function(){ 										// plus US
 												if (xPosition[i] > barchartWidth*3/4) {
 														return (xPosition[i]) - barchartWidth/2; }
 												 else { return (+xPosition[i]) + 8; }
 						})
 						.attr("y",-7)
-						.style("display", "block")
-						.text(function(d,j){
-								//tabSpec = "Total"+sectionName; console.log(tabSpec);
-								var tradeVal = graphic_data.filter(function(v){
-																				return v.AREACD == selectedID;
-																			});
-									if(tradeVal[0][sectionName] > 0){
-								return selectedName + ": £" + d3.format(dvc.essential.dataFormats)(tradeVal[0][sectionName]) + "m";
-						}else {
-								return selectedName + ": -£" + d3.format(dvc.essential.dataFormats)(eval((tradeVal[0][sectionName])*-1)) + "m";
-						}
-						})
-						.style("fill", function(d){
-								//console.log(d);
-								if(d.EU === "TRUE") { return "#FF9933"; }
-												else { return "#5F7682"; }
-									});
+						.style("display", "block");
+
+        selected.selectAll("*").remove()
+
+
+        selected.append("tspan")
+          .attr("class","selectedareaText1")
+          .text(selectedName + ": ")
+
+        selected.append("tspan")
+            .attr("class","selectedareaText2")
+            .text(function(d,j){
+  								//tabSpec = "Total"+sectionName; console.log(tabSpec);
+  								var tradeVal = graphic_data.filter(function(v){
+  																				return v.AREACD == selectedID;
+  																			});
+  									if(tradeVal[0][sectionName] > 0){
+  								return "£" + d3.format(dvc.essential.dataFormats)(tradeVal[0][sectionName]) + "m";
+  						}else {
+  								return "-£" + d3.format(dvc.essential.dataFormats)(eval((tradeVal[0][sectionName])*-1)) + "m";
+  						}
+  						})
+						// .style("fill", function(d){
+						// 		//console.log(d);
+						// 		if(d.EU === "TRUE") { return "#FF9933"; }
+						// 						else { return "#5F7682"; }
+						// 			});
 
 							boxText = d3.select(this).select('text.selectedareaText');
 							//boxTextin = boxText[0].map(function(d) { /*console.log(d);*/ return d.innerHTML; } );
