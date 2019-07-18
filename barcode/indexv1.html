@@ -56,7 +56,7 @@
 			font-weight:500;
 			font-size:16px;
 			color:#124D80;
-			padding: 10px 10px 10px 10px;
+			padding: 10px 10px 0px 10px;
 		}
 		#sel{
 			height:50px;
@@ -81,7 +81,7 @@
 								height:auto;
 								display: block;
 								background-color: #fff;
-								margin-bottom:30px;
+								margin-bottom:10px;
 
 
 							}
@@ -117,7 +117,7 @@
 					.topLine{
 							position: absolute;
 							height:100%;
-							background-color: #fafafa;
+							/*background-color: #fafafa;*/
 							border-right: 2px dashed rgba(208, 210, 211, 1);
 							/*--border-color: #5ba741;
 							--border-weight: 2px;*/
@@ -133,7 +133,7 @@
 							/*background-color:#f1f1f1;*/
 							position:relative;
 							font-size: 18px;
-							font-weight: 600;
+							font-weight: 700;
 
 							/*color:#666;*/
 						}
@@ -144,7 +144,7 @@
 								padding-top:10px;
 								text-align: right;
 								color:#124D80;
-									background-color: #fafafa;
+								/*	background-color: #fafafa;*/
 									border-right: 2px dashed rgba(208, 210, 211, 1);
 									/*--border-color: #5ba741;
 									--border-weight: 2px;*/
@@ -187,7 +187,7 @@
 							}
 								.defsurpTx{
 									font-size:14px;
-									font-weight:600;
+									font-weight:400;
 									color:#124D80;
 									margin: 0px 10px 0px 10px;
 									}
@@ -207,7 +207,7 @@
 												color: #206095;
 												/*padding-top: 10px;
 												padding-bottom: 10px;*/
-													background-color: #fafafa;
+												/*background-color: #fafafa;*/
 													border-right: 2px dashed rgba(208, 210, 211, 1);
 													/*--border-color: #5ba741;
 													--border-weight: 2px;*/
@@ -291,8 +291,6 @@
 
 				.ghostBar{
 					fill: #eee;
-					stroke: #999;
-					stroke-width : 0.5px;
 				}
 
 				.rankText{
@@ -348,14 +346,14 @@
 						color:#124D80;
 						padding-bottom:5px;
 						font-size:18px;
-						font-weight:600;
+						font-weight:500;
             font-family: "Open Sans";
 							}
 
 				p.totalTrade{
 					text-decoration: underline #124D80;
 						font-size:18px;
-							font-weight:600;
+							font-weight:700;
               font-family: "Open Sans";
 				}
 
@@ -913,6 +911,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 									   .style("color", "#ff9933")
 									   .text('| EU countries')
 									   .append('tspan')
+                     .style("margin-left","15px")
 									   .style("color", "#5F7682")
 									   .text(' | Rest of the world');
 
@@ -1072,7 +1071,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 						.attr("y", 0)
 						.attr("x", function(d){
 							if(d[type1] !="null"){
-								return x(d[type1]);
+								return x(d[type1]) -1;
 							}
 						})
 						.style("display", function(d){
@@ -1166,8 +1165,8 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 					.attr("id", function(){
 												return "chartBox"+i;
 											})
-				    .attr("width", barchartWidth)
-					.attr("height", height*1.5); // 10 for the x-axis label
+				    .attr("width", barchartWidth + margin.left + margin.right)
+					.attr("height", height + margin.top + margin.bottom); // 10 for the x-axis label
 
 
 			// add the top service imported / exported If needed
@@ -1188,7 +1187,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 			//xAxis2.ticks = 5;
 				    d3.select("#chartBox"+i).append('g')
 				        .attr('class', 'x2 axis')
-				        .attr("transform", "translate(" + (dvc.half + margin.left - x2(0)) + ", "+ (height*0.8) +")")
+				        .attr("transform", "translate(" + (dvc.half + margin.left - x2(0)) + ", "+ (height+6) +")")
 				        .call(xAxis2);
 
 					d3.select("#chartBox"+i)
@@ -1198,7 +1197,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 						 .attr("x", (dvc.half*2) + margin.left)
 						 .attr("dy", ".71em")
 						 //.attr("transform", "translate(" + (dvc.half - x2(0)) + ", "+ (height*0.8) +")")
-						  .attr("transform", "translate(" + ((dvc.half * 0.9) - x2(0)) + ", "+ (height*0.8) +")")
+						 .attr("transform", "translate(0, "+ height +")")
 						 .style("text-anchor", "end")
 						 .text(dvc.essential.xAxisLabel);
 
@@ -1223,7 +1222,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 							.attr('class', 'ghostBar')
 							.attr("width", function(d,i) {
 													return x2(bars["Totalexport"][0].amt) - x2(0); })
-							.attr("height", y.rangeBand())
+							.attr("height", height)
 							.attr("x", x2(0))
 							.attr("transform", "translate(" + (dvc.half + margin.left - x2(0)) + "," + (height*0.1) + ")");
 
@@ -1232,7 +1231,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 							.attr('class', 'ghostBar')
 							.attr("width", function(d,i) {
 													return x2(bars["Totalexport"][0].amt) - x2(0); })
-							.attr("height", y.rangeBand())
+							.attr("height", height)
 							.attr("x", x2(0)- (x2(bars["Totalexport"][0].amt) - x2(0)) )
 							.attr("transform", "translate(" + (dvc.half + margin.left - x2(0)) + "," + (height*0.1) + ")");
 
@@ -1288,7 +1287,7 @@ function addMap(){
 
 				d3.json("data/worldjson8.json", function(error, geog){
 
-					mapHeight = 190;
+					mapHeight = 210;
 
 				 	svg = d3.select("#map")
 								  .append("svg")
@@ -1686,7 +1685,7 @@ names.forEach(function(d,i){
 //														else {return y("exports"); }
 //														})
 						.attr("opacity", function(d,i) { if(i==1) return 0.7; })
-						.attr("height", y.rangeBand())
+						.attr("height", height)
 						.attr("transform", "translate(" + (dvc.half + margin.left - x2(0)) + "," + (height*0.1) + ")");
 
 
