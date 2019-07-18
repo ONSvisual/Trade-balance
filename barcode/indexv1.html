@@ -1505,7 +1505,7 @@ function highlight(chartType, selectedID, selectedName) {//console.log("ƒ highl
 									if(tradeVal[0][sectionName] > 0){
 								return selectedName + ": £" + d3.format(dvc.essential.dataFormats)(tradeVal[0][sectionName]) + "m";
 						}else {
-								return selectedName + ": -£" + eval(d3.format(dvc.essential.dataFormats)(tradeVal[0][sectionName])) + "m";
+								return selectedName + ": -£" + d3.format(dvc.essential.dataFormats)(eval((tradeVal[0][sectionName])*-1)) + "m";
 						}
 						})
 						.style("fill", function(d){
