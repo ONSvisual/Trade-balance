@@ -325,6 +325,7 @@
 		.selectedareaText{
 			font-size:18px;
 			font-weight:600;
+			color: #124D80;
 		}
 
 
@@ -1181,7 +1182,13 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 //							})
 				        .call(yAxis);
 						
-						
+			// remove minus from x-axis
+			//d3.select("#chartBox"+i).select('g.x2.axis').selectAll('text').remove();
+			ticker = d3.select("#chartBox"+i).select('g.x2.axis').selectAll('text');
+					ticker[0].forEach(function(d,i){ console.log(i,d.innerHTML);
+				                 return 40; //d.innerHTML;
+			});
+			
 
 
 						d3.select("#chartBox"+i)
@@ -1505,7 +1512,7 @@ function highlight(chartType, selectedID, selectedName) {//console.log("ƒ highl
 									if(tradeVal[0][sectionName] > 0){
 								return selectedName + ": £" + d3.format(dvc.essential.dataFormats)(tradeVal[0][sectionName]) + "m";
 						}else {
-								return selectedName + ": -£" + d3.format(dvc.essential.dataFormats)(eval((tradeVal[0][sectionName])*-1)) + "m";
+								return selectedName + ": -£" + eval(d3.format(dvc.essential.dataFormats)(tradeVal[0][sectionName])) + "m";
 						}
 						})
 						.style("fill", function(d){
