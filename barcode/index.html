@@ -22,10 +22,10 @@
 
 		body{
       font-family:"Open Sans";
-			max-width:940px;
+			max-width:850px;
 			width: 100%;
 			height:100%;
-			margin:0px auto;
+			margin:0px;
 
 		}
 
@@ -536,12 +536,17 @@
       padding-top:30px;
     }
 
-    #source, #lastupdated {
+    #source {
       font-weight: 700;
       font-size:16px;
       color: #323132;
     }
 
+    #lastupdated {
+      font-weight: 400;
+      font-size:16px;
+      color: #323132;
+    }
 </style>
 
     <script>
@@ -663,11 +668,13 @@ function createStructure(){ // console.log(names, bar_data);
 															//console.log(filtereddata[0]);
 															highlight("chosen",filtereddata[0].AREACD,filtereddata[0].AREANM)
 															d3.select("#graphic").style("pointer-events", "none")
-                              d3.select(".map").style("pointer-events", "none")
+                              d3.selectAll(".countries").on("mouseover", null);
+                              //d3.select(".map").style("pointer-events", "none")
 
 												} else {
 														d3.select("#graphic").style("pointer-events", "all")
-                            d3.select(".map").style("pointer-events", "all")
+                            //d3.select(".map").style("pointer-events", "all")
+                            d3.selectAll(".countries").on("mouseover", function(d){ highlight("map",d.properties.fips, d.properties.name) });
 														resetMap();
 														unhighlight();
 														removeFigures();
@@ -1268,9 +1275,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 							 .append("text")
 							 .attr('class', 'x2 axis')
 							 .attr("y", height+margin.top+13)
-							 .attr("x", function(d) {
-													return x2(bars["Totalexport"][0].amt) - x2(0) + dvc.half + margin.left;
-													 })
+							 .attr("x", chart_width + 20)
 							 .attr("dy", ".71em")
 							 .style("text-anchor", "end")
 							 .text(dvc.essential.xAxisLabel);
@@ -1359,7 +1364,7 @@ function addMap(){
 							  // was "click"
                 .on("click", function(d){
                   d3.select("#graphic").style("pointer-events", "none");
-                  d3.select(".map").style("pointer-events", "none");
+                  d3.selectAll(".countries").on("mouseover", null);
                   highlight("map",d.properties.fips, d.properties.name) })
 							  .on("mouseover", function(d){ highlight("map",d.properties.fips, d.properties.name) }); // was click
 							 // .on("mouseover",function(d){
