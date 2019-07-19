@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700,800,900|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,900|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 
     <title>Trade17July</title>
 
@@ -202,7 +202,7 @@
 */
 											#key{
 												font-size: 16px;
-												font-weight: 600;
+												/*font-weight: 600;*/
 												float:left;
 												color: #206095;
 												/*padding-top: 10px;
@@ -242,10 +242,10 @@
 								font-weight: 400;
 								}
 								.tsamt{
-									font-weight: 600;
+									font-weight: 700;
 								}
 								.tdamt{
-									font-weight: 600;
+									font-weight: 700;
 									float:right;
 								}
 
@@ -367,6 +367,7 @@
 					text-decoration: underline #124D80;
 						font-size:18px;
 							font-weight:700;
+              color:#124D80;
               font-family: "Open Sans";
 				}
 
@@ -416,7 +417,7 @@
 
 					.selectedareaText{
 								font-size:14px;
-								font-weight:600;
+								font-weight:400;
 							}
 
 
@@ -448,13 +449,13 @@
 				p.totalTrade{
 					text-decoration: underline #124D80;
 						font-size:14px;
-							font-weight:600;
+							font-weight:700;
 
 						}
 				p.tparaTx{
 					padding-bottom: 5px;
 						font-size:14px;
-							font-weight:600;
+							font-weight:700;
 				}
 
 
@@ -531,6 +532,16 @@
         pointer-events: auto;
     }
 
+    #sourceblock {
+      padding-top:30px;
+    }
+
+    #source, #lastupdated {
+      font-weight: 700;
+      font-size:16px;
+      color: #323132;
+    }
+
 </style>
 
     <script>
@@ -557,8 +568,8 @@
                 <div id='selectNav'></div>
                 <div id="map">
                         <div class="zoom-container zoom-control-zoom zoom-bar zoom-control hidden-xs">
-                        <a id="zoom-in" class="zoom-control-zoom-in zoom-bar-part zoom-bar-part-top" title="Zoom in">+</a>
-                        <a id="zoom-out" class="zoom-control-zoom-out zoom-bar-part zoom-bar-part-bottom" title="Zoom out">-</a>
+                        <a id="zoom-in" tabindex=2 class="zoom-control-zoom-in zoom-bar-part zoom-bar-part-top" title="Zoom in">+</a>
+                        <a id="zoom-out" tabindex=3 class="zoom-control-zoom-out zoom-bar-part zoom-bar-part-bottom" title="Zoom out">-</a>
                         </div>
                 </div>
            </div>
@@ -574,6 +585,11 @@
       		<div id="chartArea">
                 <div id="graphic"></div>
         	</div>
+
+          <div id="sourceblock">
+                <h4 id="source">Source: Office for National Statistics</h4>
+                <h4 id="lastupdated">Last updated: 24th July 2019. Data for xxxxxxx</h4>
+          </div>
 
       </div>
 
@@ -613,15 +629,6 @@ function createStructure(){ // console.log(names, bar_data);
 							.attr("id","sel")
 							.append("select")
 							.attr("id","areaselect")
-							//.attr("style", "width: 95%")
-
-//							function(d,i){
-//								if(parseInt(graphic.style("width")) < dvc.optional.mobileBreakpoint){
-//									return "width:99%";
-//								} else {
-//									return "width:99%"; //300px"
-//								}
-//							})
 							.attr("class","chosen-select");
 
 				optns.append("option")
@@ -661,15 +668,20 @@ function createStructure(){ // console.log(names, bar_data);
 														resetMap();
 														unhighlight();
 														removeFigures();
+
+                            if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
+                    				 d3.select("#topPara")
+                    								.html('<p>Use the dropdown above or the map on the right to select a country to view trade balances.</p> <p>Alternatively explore the barcode chart below by rolling over the lines that represent each country in the world.</p>');
+                            }
+
 												}
 					});
 
+        if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
 				 d3.select("#selectNav").append("div")
 								.attr("id", "topPara")
-								//.append('p')
-								//.append('html')
 								.html('<p>Use the dropdown above or the map on the right to select a country to view trade balances.</p> <p>Alternatively explore the barcode chart below by rolling over the lines that represent each country in the world.</p>');
-
+        }
 
 
 			////   Adds the 3 big divs for to house all the content, v.!
@@ -975,7 +987,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 	names.forEach(function(d,i){
 								type1 = d;
 
-				tabInd = -1;
+				tabInd = 3;
 					d3.select("#tabs").append('div')
 										.attr('tabindex', function(){
 															return i;
@@ -1054,7 +1066,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 								if(d.EU === "TRUE") { return "#FF9933"; }
 												else { return "#5F7682"; }
 						})
-						.style("opacity", 0.8)
+						.style("opacity", 1)
 						.attr("class",function(d,i){
 							if(d.AREACD != dvc.essential.highlight){
 								return d.AREACD + " hoverbar allbars";
@@ -1882,9 +1894,9 @@ names.forEach(function(d,i){
 	// Update the tab values
 			d3.select("#tpara0").text(function(){
 												if(goodsBalance[0].Total >=0){
-												d3.select("#tpara0").style("color", "#2471a3");
+											//	d3.select("#tpara0").style("color", "#2471a3");
 										  		return  "£"+d3.format(dvc.essential.dataFormats)(goodsBalance[0].Total)/* + "M surplus"*/; }
-										else{ 	d3.select("#tpara0").style("color", "#5F7682");
+										else{ 	//d3.select("#tpara0").style("color", "#5F7682");
 											if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
 												return "£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Total)))/* + "M deficit"*/; }
 											else { return "-£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Total)))/* + "M deficit"*/; }
@@ -1893,9 +1905,9 @@ names.forEach(function(d,i){
 
 			d3.select("#tpara1").text(function(){
 												if(goodsBalance[0].Goods >=0){
-												d3.select("#tpara1").style("color", "#2471a3");
+												//d3.select("#tpara1").style("color", "#2471a3");
 										  		return  "£"+d3.format(dvc.essential.dataFormats)(goodsBalance[0].Goods)/* + "M surplus"*/; }
-										else{ 	d3.select("#tpara1").style("color", "#5F7682");
+										else{ 	//d3.select("#tpara1").style("color", "#5F7682");
 												if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
 												return "£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Goods)))/* + "M deficit"*/; }
 											else { return "-£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Goods)))/* + "M deficit"*/; }
@@ -1904,9 +1916,9 @@ names.forEach(function(d,i){
 
 			d3.select("#tpara2").text(function(){
 												if(goodsBalance[0].Services >=0){
-												d3.select("#tpara2").style("color", "#2471a3");
+												//d3.select("#tpara2").style("color", "#2471a3");
 										  		return  "£"+d3.format(dvc.essential.dataFormats)(goodsBalance[0].Services)/* + "M surplus"*/; }
-										else{ 	d3.select("#tpara2").style("color", "#5F7682");
+										else{ 	//d3.select("#tpara2").style("color", "#5F7682");
 												if (parseInt(graphic.style("width")) > dvc.optional.mobileBreakpoint) {
 												return "£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Services)))/* + "M deficit"*/; }
 											else { return "-£"+ (d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0].Services)))/* + "M deficit"*/; }
@@ -1927,7 +1939,11 @@ names.forEach(function(d,i){
 					d3.select("#tpara2").append('text').text("m surplus"); }
 			 else { d3.select("#tpara2").append('text').text("m deficit"); }
 
-		}
+		} else {
+          d3.select("#tpara0").append('text').text("m");
+          d3.select("#tpara1").append('text').text("m");
+          d3.select("#tpara2").append('text').text("m");
+    }
 
 
 } // ends updateBars
