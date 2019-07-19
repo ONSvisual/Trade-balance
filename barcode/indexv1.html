@@ -587,8 +587,8 @@
         	</div>
 
           <div id="sourceblock">
-                <h4 id="source">Source: Office for National Statistics</h4>
-                <h4 id="lastupdated">Last updated: 24th July 2019. Data for xxxxxxx</h4>
+                <h4 id="source">Source: UK Trade Statistics, Office for National Statistics</h4>
+                <h4 id="lastupdated">Last updated: 24th July 2019.</h4>
           </div>
 
       </div>
@@ -663,8 +663,11 @@ function createStructure(){ // console.log(names, bar_data);
 															//console.log(filtereddata[0]);
 															highlight("chosen",filtereddata[0].AREACD,filtereddata[0].AREANM)
 															d3.select("#graphic").style("pointer-events", "none")
+                              d3.select(".map").style("pointer-events", "none")
+
 												} else {
 														d3.select("#graphic").style("pointer-events", "all")
+                            d3.select(".map").style("pointer-events", "all")
 														resetMap();
 														unhighlight();
 														removeFigures();
@@ -1331,6 +1334,12 @@ function addMap(){
 								  .append('g')
 								  .attr('class', 'map');
 
+          svg.append("rect")
+                  .attr("width", barchartWidth/2)
+                  .attr("height", mapHeight)
+                  .attr("x",0)
+                  .attr("y",0)
+                  .attr("fill","#eeeeee")
 
 					projection = d3.geo.equirectangular()
                      .scale((barchartWidth/2) * 0.15)
@@ -1348,6 +1357,10 @@ function addMap(){
 							  .attr("id", function(d){return "shape" + d.properties.fips})
 							  .attr("d", path)
 							  // was "click"
+                .on("click", function(d){
+                  d3.select("#graphic").style("pointer-events", "none");
+                  d3.select(".map").style("pointer-events", "none");
+                  highlight("map",d.properties.fips, d.properties.name) })
 							  .on("mouseover", function(d){ highlight("map",d.properties.fips, d.properties.name) }); // was click
 							 // .on("mouseover",function(d){
 //								highlightcountry(d.properties.fips);
@@ -1881,7 +1894,7 @@ names.forEach(function(d,i){
                       }
 		if(countryNM == "United States inc Puerto Rico" || countryNM == "United States of America") countryNM = "US inc Puerto Rico";
 
-        return '<p>The UK has a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Total"])) + tradeDefSurp +' with ' + countryNM + ', which means ' + weDefSur + '.</p> <p>We have a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Goods"])) + tradeDefSurpGoods + offset + ' a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Services"])) + ' million' + weDefSurServ + ' in Services.</p>';
+        return '<p>In 2018, the UK has a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Total"])) + tradeDefSurp +' with ' + countryNM + ', which means ' + weDefSur + '.</p> <p>We have a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Goods"])) + tradeDefSurpGoods + offset + ' a £' + d3.format(dvc.essential.dataFormats)(Math.abs(goodsBalance[0]["Services"])) + ' million' + weDefSurServ + ' in Services.</p>';
               });
 
 
