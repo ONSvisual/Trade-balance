@@ -659,7 +659,7 @@ function createStructure(){ // console.log(names, bar_data);
 					.text(function(d){ return d[0]});
 
 
-			var selWidth = parseInt(selectNav.style("width")); console.log("selWidth " + selWidth);
+			var selWidth = parseInt(selectNav.style("width")); //console.log("selWidth " + selWidth);
 			$('#areaselect').chosen({ width: (selWidth*0.95)+"px", allow_single_deselect:true })
 					.on('change',function(evt, params){
 												//unhighlight();
@@ -747,7 +747,7 @@ function drawGraphic(names){
 						var chart_width = parseInt(graphic.style("width")) - margin.left - margin.right;
 						height = dvc.essential.height_sm_md_lg[2] +0 - margin.top - margin.bottom;
 				}
-			console.log("Dimension chart_width, height: "+chart_width, height);
+		//console.log("Dimension chart_width, height: "+chart_width, height);
 
 	////////////  Barchart setup  //////////////////////////////////////////////////////////
 
@@ -891,10 +891,10 @@ function drawGraphic(names){
 							.style("width", barchartWidth +"px")
 							.style("height", 50 +"px")
 
-console.log("barchartWidth*0.5: " + barchartWidth*0.5 );
-console.log("dvc.half = x(0):"+dvc.half);
-console.log("margin.left:"+margin.left);
-console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + margin.left) - (barchartWidth*0.25)) );
+//console.log("barchartWidth*0.5: " + barchartWidth*0.5 );
+//console.log("dvc.half = x(0):"+dvc.half);
+//console.log("margin.left:"+margin.left);
+//console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + margin.left) - (barchartWidth*0.25)) );
 
 			arrows.append("div")
                 .attr("class", "deficit ")
@@ -1249,7 +1249,7 @@ console.log("(dvc.half + margin.left) - (barchartWidth*0.25): " + ((dvc.half + m
 			// remove minus from x-axis
 			//d3.select("#chartBox"+i).select('g.x2.axis').selectAll('text').remove();
 			ticker = d3.select("#chartBox"+i).select('g.x2.axis').selectAll('text');
-					ticker[0].forEach(function(d,i){ console.log(i,d.innerHTML);
+					ticker[0].forEach(function(d,i){
 				                 return 40; //d.innerHTML;
 			});
 
