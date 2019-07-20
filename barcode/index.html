@@ -625,7 +625,13 @@ function createStructure(){ // console.log(names, bar_data);
 				var menuarea = d3.zip(areanames,areacodes).sort(function(a, b){
 									return d3.ascending(a[0], b[0]);
 								});
+
 		d3.select("#selectNav").selectAll("*").remove();
+    d3.select("#map").selectAll("*").remove();
+    d3.select("#tabs").selectAll("*").remove();
+    d3.select("#defsurp").selectAll("*").remove();
+    d3.select("#infoKey").selectAll("*").remove();
+
 
 
 				// Build option menu for occupations
