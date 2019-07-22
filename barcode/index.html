@@ -292,6 +292,8 @@
 
 				.ghostBar{
 					fill: #eee;
+					stroke: #0F3;
+					stroke-width:1px;
 				}
 
 				.rankText{
@@ -836,9 +838,13 @@ function drawGraphic(names){
 
 		    x2.domain(xDomain);
 
+			 fmt = d3.format(",.0");
 			 xAxis2 = d3.svg.axis()
 		        .scale(x2)
-		        .orient('bottom');
+		        .orient('bottom')
+				.tickFormat(function(d){
+										if(d < 0) d = -d;
+										return fmt(d); });
 
 		//specify number or ticks on x axis
 
@@ -876,7 +882,7 @@ function drawGraphic(names){
 
 				// So to balance the '0'
 				dvc.half = x(0);
-				x2.range([ 0, chart_width * 0.94]);  // These coefficients size the whole charts and their components.
+				x2.range([ 0, chart_width * 0.85]);  // These coefficients size the whole charts and their components.
 
 
 		 // sort out map buttons
@@ -1128,7 +1134,7 @@ function drawGraphic(names){
 						})
 						//.attr("y",height)
 						.text(function(d,j){ // Id = d.AREACD;
-							if(d.AREACD == dvc.essential.highlight){
+							if(d.AREACD == dvc.essential.highlight){ //console.log(d);
 								return d.AREANM +": "+d3.format(dvc.essential.dataFormats)(d[type1])
 							}
 						});
@@ -1247,14 +1253,6 @@ function drawGraphic(names){
 //									}
 //							})
 				        .call(yAxis);
-
-			// remove minus from x-axis
-			//d3.select("#chartBox"+i).select('g.x2.axis').selectAll('text').remove();
-			ticker = d3.select("#chartBox"+i).select('g.x2.axis').selectAll('text');
-					ticker[0].forEach(function(d,i){
-				                 return 40; //d.innerHTML;
-			});
-
 
 
 						d3.select("#chartBox"+i)
