@@ -1570,10 +1570,9 @@ function highlight(chartType, selectedID, selectedName) {//console.log("ƒ highl
 			d3.selectAll(".chart") // all three
 				.each(function(d,i){
 					sectionName = d3.select(this.parentNode).attr("id");
-	//console.log(barchartWidth*3/4, xPosition[i]);
+			//console.log(barchartWidth*3/4, xPosition[i]);
 
-
-
+			if(selectedName !=="United Kingdom"){
 					selected = d3.select(this).select(".selectedareaText")
 						.attr("x", function(){ 										// plus US
 												if (xPosition[i] > barchartWidth*3/4) {
@@ -1583,12 +1582,12 @@ function highlight(chartType, selectedID, selectedName) {//console.log("ƒ highl
 						.attr("y",-7)
 						.style("display", "block");
 
-        selected.selectAll("*").remove()
+        selected.selectAll("*").remove();
 
-
+	
         selected.append("tspan")
           .attr("class","selectedareaText1")
-          .text(selectedName + ": ")
+          .text(function(){ return selectedName + ": "; });
 
         selected.append("tspan")
             .attr("class","selectedareaText2")
@@ -1603,6 +1602,8 @@ function highlight(chartType, selectedID, selectedName) {//console.log("ƒ highl
   								return "-£" + d3.format(dvc.essential.dataFormats)(eval((tradeVal[0][sectionName])*-1)) + "m";
   						}
   						})
+		} // ends if !UK
+		
 						// .style("fill", function(d){
 						// 		//console.log(d);
 						// 		if(d.EU === "TRUE") { return "#FF9933"; }
@@ -1614,6 +1615,7 @@ function highlight(chartType, selectedID, selectedName) {//console.log("ƒ highl
 
 							//createBackRect(boxText[0][0]);
 				})
+		
 
 
 			//var exportData = bars.Allexport;
@@ -1855,7 +1857,7 @@ names.forEach(function(d,i){
 					d3.select("#chartBox"+i).append("text")
 									.attr('id', "rankImport")
 									.attr('class', 'rankText')
-									.attr('x', x2(-75000))
+									.attr('x', x2(-90000)+margin.left)
 									.attr('y', 30)
 									.attr("text-anchor", "start")
 									//.text(function(){ return "Rank #" + idData2[0].rank; });
@@ -1864,7 +1866,7 @@ names.forEach(function(d,i){
 					d3.select("#chartBox"+i).append("text")
 									.attr('id', "rankExport")
 									.attr('class', 'rankText')
-									.attr('x', x2(100000))
+									.attr('x', x2(94000)+margin.left)
 									.attr('y', 30)
 									.attr("text-anchor", "start")
 									//.text(function(){ return "Rank #" + idData2[0].rank; });
