@@ -629,7 +629,7 @@ function createStructure(){ // console.log(names, bar_data);
 								});
 
 		d3.select("#selectNav").selectAll("*").remove();
-    d3.select("#map").selectAll("*").remove();
+    d3.select("#map").select("svg").remove();
     d3.select("#tabs").selectAll("*").remove();
     d3.select("#defsurp").selectAll("*").remove();
     d3.select("#infoKey").selectAll("*").remove();
@@ -835,10 +835,14 @@ function drawGraphic(names){
 		    }
 
 		    x2.domain(xDomain);
-
+			
+			fmt = d3.format(",.0");
 			 xAxis2 = d3.svg.axis()
 		        .scale(x2)
-		        .orient('bottom');
+		        .orient('bottom')
+				.tickFormat(function(d){
+										if(d < 0) d = -d;
+										return fmt(d); });
 
 		//specify number or ticks on x axis
 
@@ -860,6 +864,13 @@ function drawGraphic(names){
 				var xAxis = d3.svg.axis()
 					.scale(x);
 
+			if ( parseInt(graphic.style("width")) <= threshold_sm) {
+				xAxis.ticks(dvc.optional.x_num_ticks_sm_md_lg[0]);
+			// } else if (graphic.width <= threshold_md){
+			//	xAxis2.ticks(dvc.optional.x_num_ticks_sm_md_lg[1])
+			 } else {
+				xAxis.ticks(dvc.optional.x_num_ticks_sm_md_lg[2]);
+			 }
 
 			var mini = 0
 			var maxi = 0;
@@ -871,7 +882,7 @@ function drawGraphic(names){
 							});
 
 
-			   x.domain([-40000,40000])
+			   x.domain([-50000,50000])
 				.range([ 0, chart_width * 0.95]);
 
 				// So to balance the '0'

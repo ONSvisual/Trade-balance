@@ -1,235 +1,235 @@
 AREACD,AREANM,EU,Total,Goods,Services
-AD,Andorra,FALSE,44,5,39
-AE,United Arab Emirates,FALSE,5170,3455,1715
-AF,Afghanistan,FALSE,74,11,63
-AG,Antigua & Barbuda,FALSE,3,-3,6
-AI,Anguilla,FALSE,4,0,4
-AL,Albania,FALSE,8,4,4
-AM,Armenia,FALSE,87,1,86
-AO,Angola,FALSE,456,252,204
+AD,Andorra,FALSE,-263,3,-266
+AE,United Arab Emirates,FALSE,4288,3174,1114
+AF,Afghanistan,FALSE,-23,19,-42
+AG,Antigua & Barbuda,FALSE,-118,-13,-105
+AI,Anguilla,FALSE,3,0,3
+AL,Albania,FALSE,6,3,3
+AM,Armenia,FALSE,12,4,8
+AO,Angola,FALSE,472,87,385
 AQ,Antarctica,FALSE,0,0,0
-AR,Argentina,FALSE,-188,-385,197
+AR,Argentina,FALSE,35,-290,325
 AS,American Samoa,FALSE,3,0,3
-AT,Austria,TRUE,-1570,-1496,-74
-AU,Australia,FALSE,5158,2735,2423
-AW,Aruba,FALSE,34,34,0
-AZ,Azerbaijan,FALSE,286,105,181
-BA,Bosnia & Herzegovina,FALSE,56,1,55
-BB,Barbados,FALSE,-181,9,-190
-BD,Bangladesh,FALSE,-2377,-2560,183
-BE,Belgium,TRUE,-9087,-11403,2316
-BF,Burkina Faso,FALSE,3,-1,4
-BG,Bulgaria,TRUE,-111,-56,-55
-BH,Bahrain,FALSE,414,200,214
-BI,Burundi,FALSE,1,1,0
-BJ,Benin,FALSE,17,12,5
-BM,Bermuda,FALSE,-891,107,-998
-BN,Brunei,FALSE,191,36,155
-BO,Bolivia,FALSE,12,-3,15
-BQ,"Bonaire, Sint Eustatius and Saba",FALSE,0,0,0
-BR,Brazil,FALSE,801,170,631
-BS,Bahamas,FALSE,-66,7,-73
-BT,Bhutan,FALSE,1,0,1
+AT,Austria,TRUE,-1825,-1864,39
+AU,Australia,FALSE,5744,2894,2850
+AW,Aruba,FALSE,9,15,-6
+AZ,Azerbaijan,FALSE,293,49,244
+BA,Bosnia & Herzegovina,FALSE,4,-2,6
+BB,Barbados,FALSE,40,-2,42
+BD,Bangladesh,FALSE,-2339,-2465,126
+BE,Belgium,TRUE,-9685,-12126,2441
+BF,Burkina Faso,FALSE,12,5,7
+BG,Bulgaria,TRUE,-270,-138,-132
+BH,Bahrain,FALSE,285,88,197
+BI,Burundi,FALSE,46,0,46
+BJ,Benin,FALSE,18,16,2
+BM,Bermuda,FALSE,-339,32,-371
+BN,Brunei,FALSE,-21,-82,61
+BO,Bolivia,FALSE,31,17,14
+BQ,"Bonaire, Sint Eustatius and Saba",FALSE,1,1,0
+BR,Brazil,FALSE,602,159,443
+BS,Bahamas,FALSE,81,35,46
+BT,Bhutan,FALSE,-4,-6,2
 BV,Bouvet Island,FALSE,0,0,0
-BW,Botswana,FALSE,321,4,317
-BY,Belarus,FALSE,69,68,1
-BZ,Belize,FALSE,-30,-39,9
-CA,Canada,FALSE,2390,-21,2411
+BW,Botswana,FALSE,374,12,362
+BY,Belarus,FALSE,90,97,-7
+BZ,Belize,FALSE,-56,-66,10
+CA,Canada,FALSE,2026,-21,2047
 CC,Cocos Islands,FALSE,0,0,0
-CD,Congo (Democratic Republic),FALSE,59,11,48
-CF,Central African Republic,FALSE,0,0,0
-CG,Congo (Republic),FALSE,203,33,170
-HR,Croatia,TRUE,-257,22,-279
-CI,Ivory Coast,FALSE,-32,-175,143
-CK,Cook Islands,FALSE,2,0,2
-CL,Chile,FALSE,100,-147,247
-CM,Cameroon,FALSE,51,-37,88
-CN,China,FALSE,-22374,-25419,3045
-CO,Colombia,FALSE,272,-13,285
-CR,Costa Rica,FALSE,-256,-202,-54
-CU,Cuba,FALSE,-309,12,-321
-CV,Cape Verde,FALSE,0,0,0
-CW,Curacao,FALSE,115,6,109
+CD,Congo (Democratic Republic),FALSE,63,13,50
+CF,Central African Republic,FALSE,4,4,0
+CG,Congo (Republic),FALSE,4,-12,16
+HR,Croatia,TRUE,-417,55,-472
+CI,Ivory Coast,FALSE,-96,-143,47
+CK,Cook Islands,FALSE,1,0,1
+CL,Chile,FALSE,-249,-392,143
+CM,Cameroon,FALSE,50,-31,81
+CN,China,FALSE,-22315,-25462,3147
+CO,Colombia,FALSE,-9,-17,8
+CR,Costa Rica,FALSE,-299,-199,-100
+CU,Cuba,FALSE,-139,4,-143
+CV,Cape Verde,FALSE,-2,0,-2
+CW,Curacao,FALSE,88,7,81
 CX,Christmas Island,FALSE,0,0,0
-CY,Cyprus,TRUE,-172,154,-326
-CZ,Czech Republic,TRUE,-3097,-3581,484
-FR,France,TRUE,1584,-3194,4778
-DJ,Djibouti,FALSE,-4,-8,4
-DK,Denmark,TRUE,269,-2223,2492
-DM,Dominica,FALSE,3,3,0
-DO,Dominican Republic,FALSE,-52,-52,0
-DZ,Algeria,FALSE,-1132,-1077,-55
-EC,Ecuador,FALSE,-120,-83,-37
-EE,Estonia,TRUE,-3,-63,60
-EG,Egypt,FALSE,958,656,302
-ER,Eritrea,FALSE,2,0,2
-DE,Germany,TRUE,-21691,-31663,9972
-ET,Ethiopia,FALSE,-109,-128,19
-FI,Finland,TRUE,-292,-1195,903
-FJ,Fiji,FALSE,39,-23,62
-FK,Falkland Islands,FALSE,23,16,7
-FM,Micronesia,FALSE,1,0,1
-FO,Faroe Islands,FALSE,-224,-226,2
-GR,Greece,TRUE,-1358,85,-1443
-GA,Gabon,FALSE,61,9,52
-GD,Grenada,FALSE,-75,1,-76
-GE,Georgia,FALSE,21,48,-27
-GH,Ghana,FALSE,201,180,21
-GI,Gibraltar,FALSE,1807,342,1465
-GL,Greenland,FALSE,-2,-2,0
-GM,Gambia,FALSE,-12,1,-13
-GN,Guinea,FALSE,47,12,35
-GQ,Equatorial Guinea,FALSE,-12,-49,37
-HU,Hungary,TRUE,-1330,-1360,30
+CY,Cyprus,TRUE,-231,156,-387
+CZ,Czech Republic,TRUE,-3560,-3705,145
+FR,France,TRUE,-732,-3706,2974
+DJ,Djibouti,FALSE,134,-4,138
+DK,Denmark,TRUE,-1163,-3940,2777
+DM,Dominica,FALSE,0,0,0
+DO,Dominican Republic,FALSE,-107,-14,-93
+DZ,Algeria,FALSE,-1823,-1923,100
+EC,Ecuador,FALSE,-69,-83,14
+EE,Estonia,TRUE,-28,-28,0
+EG,Egypt,FALSE,753,434,319
+ER,Eritrea,FALSE,3,2,1
+DE,Germany,TRUE,-21934,-31468,9534
+ET,Ethiopia,FALSE,140,95,45
+FI,Finland,TRUE,-397,-1125,728
+FJ,Fiji,FALSE,37,-3,40
+FK,Falkland Islands,FALSE,56,17,39
+FM,Micronesia,FALSE,0,0,0
+FO,Faroe Islands,FALSE,-182,-185,3
+GR,Greece,TRUE,-1378,229,-1607
+GA,Gabon,FALSE,58,16,42
+GD,Grenada,FALSE,-15,3,-18
+GE,Georgia,FALSE,55,27,28
+GH,Ghana,FALSE,12,-68,80
+GI,Gibraltar,FALSE,2165,312,1853
+GL,Greenland,FALSE,11,0,11
+GM,Gambia,FALSE,-47,5,-52
+GN,Guinea,FALSE,60,10,50
+GQ,Equatorial Guinea,FALSE,43,-14,57
+HU,Hungary,TRUE,-1503,-1347,-156
 GS,South Georgia,FALSE,0,0,0
-GT,Guatemala,FALSE,-72,-77,5
-GU,Guam,FALSE,70,0,70
-GW,Guinea Bissau,FALSE,0,0,0
-GY,Guyana,FALSE,78,-44,122
-HK,Hong Kong,FALSE,1024,189,835
+GT,Guatemala,FALSE,-64,-58,-6
+GU,Guam,FALSE,38,0,38
+GW,Guinea Bissau,FALSE,1,0,1
+GY,Guyana,FALSE,156,-16,172
+HK,Hong Kong,FALSE,1673,1343,330
 HM,Heard & McDonald Islands,FALSE,0,0,0
-HN,Honduras,FALSE,-123,-128,5
-IT,Italy,TRUE,-4101,-8136,4035
-HT,Haiti,FALSE,6,6,0
-LV,Latvia,TRUE,-344,-308,-36
-ID,Indonesia,FALSE,-113,-302,189
-IE,Irish Republic,TRUE,14071,5953,8118
-IL,Israel,FALSE,639,181,458
-IN,India,FALSE,-4035,-3210,-825
+HN,Honduras,FALSE,-127,-128,1
+IT,Italy,TRUE,-5095,-8472,3377
+HT,Haiti,FALSE,5,5,0
+LV,Latvia,TRUE,-464,-427,-37
+ID,Indonesia,FALSE,-48,-426,378
+IE,Irish Republic,TRUE,16425,8096,8329
+IL,Israel,FALSE,625,95,530
+IN,India,FALSE,-4544,-2227,-2317
 IO,British Indian Ocean Territory,FALSE,0,0,0
-IQ,Iraq,FALSE,520,297,223
-IR,Iran,FALSE,317,194,123
-IS,Iceland,FALSE,-494,-188,-306
-LT,Lithuania,TRUE,-254,-212,-42
-JE,Jersey,FALSE,1494,0,1494
-JM,Jamaica,FALSE,-392,3,-395
-JO,Jordan,FALSE,271,112,159
-JP,Japan,FALSE,-774,-3028,2254
-KE,Kenya,FALSE,-109,-175,66
-KG,Kyrgyz Republic,FALSE,10,3,7
-KH,Cambodia,FALSE,-869,-885,16
+IQ,Iraq,FALSE,507,336,171
+IR,Iran,FALSE,232,135,97
+IS,Iceland,FALSE,-549,-207,-342
+LT,Lithuania,TRUE,-620,-446,-174
+JE,Jersey,FALSE,-419,0,-419
+JM,Jamaica,FALSE,-186,0,-186
+JO,Jordan,FALSE,265,182,83
+JP,Japan,FALSE,-908,-2856,1948
+KE,Kenya,FALSE,-91,-112,21
+KG,Kyrgyz Republic,FALSE,3,1,2
+KH,Cambodia,FALSE,-841,-846,5
 KI,Kiribati,FALSE,0,0,0
 KM,Comoros,FALSE,0,0,0
-KN,St Kitts & Nevis,FALSE,7,2,5
-KP,North Korea,FALSE,-14,0,-14
-KR,South Korea,FALSE,3058,1742,1316
-KW,Kuwait,FALSE,1282,-534,1816
-KY,Cayman Islands,FALSE,1778,29,1749
-KZ,Kazakhstan,FALSE,702,-215,917
-LA,Laos,FALSE,-10,-7,-3
-LB,Lebanon,FALSE,362,297,65
-LC,St Lucia,FALSE,-128,-5,-123
-LI,Liechtenstein,FALSE,19,10,9
-LK,Sri Lanka,FALSE,-645,-566,-79
-LR,Liberia,FALSE,25,5,20
-LS,Lesotho,FALSE,2,0,2
-LU,Luxembourg,TRUE,612,-151,763
-MT,Malta,TRUE,168,292,-124
-NL,Netherlands,TRUE,-6934,-18450,11516
-LY,Libya,FALSE,-617,-684,67
-MA,Morocco,FALSE,-61,95,-156
-MD,Moldova,FALSE,-317,-11,-306
-ME,Montenegro,FALSE,-13,-10,-3
-MG,Madagascar,FALSE,-29,-11,-18
-MH,Marshall Islands,FALSE,342,1,341
-MK,FYR Macedonia,FALSE,675,804,-129
-ML,Mali,FALSE,59,32,27
-MM,Myanmar,FALSE,-110,-197,87
-MN,Mongolia,FALSE,35,16,19
-MO,Macao,FALSE,82,39,43
-MP,Northern Mariana Islands,FALSE,3,1,2
-MR,Mauritania,FALSE,26,2,24
+KN,St Kitts & Nevis,FALSE,2,0,2
+KP,North Korea,FALSE,14,0,14
+KR,South Korea,FALSE,4990,2187,2803
+KW,Kuwait,FALSE,1718,-241,1959
+KY,Cayman Islands,FALSE,1668,3,1665
+KZ,Kazakhstan,FALSE,1672,-66,1738
+LA,Laos,FALSE,4,-5,9
+LB,Lebanon,FALSE,369,293,76
+LC,St Lucia,FALSE,-137,0,-137
+LI,Liechtenstein,FALSE,53,11,42
+LK,Sri Lanka,FALSE,-542,-417,-125
+LR,Liberia,FALSE,32,-1,33
+LS,Lesotho,FALSE,4,1,3
+LU,Luxembourg,TRUE,601,-205,806
+MT,Malta,TRUE,286,474,-188
+NL,Netherlands,TRUE,-5091,-15688,10597
+LY,Libya,FALSE,-444,-532,88
+MA,Morocco,FALSE,-169,14,-183
+MD,Moldova,FALSE,-466,-7,-459
+ME,Montenegro,FALSE,-47,9,-56
+MG,Madagascar,FALSE,-18,-27,9
+MH,Marshall Islands,FALSE,380,0,380
+MK,FYR Macedonia,FALSE,1036,843,193
+ML,Mali,FALSE,67,49,18
+MM,Myanmar,FALSE,-234,-240,6
+MN,Mongolia,FALSE,19,10,9
+MO,Macao,FALSE,84,47,37
+MP,Northern Mariana Islands,FALSE,4,0,4
+MR,Mauritania,FALSE,5,1,4
 MS,Montserrat,FALSE,1,1,0
-PL,Poland,TRUE,-5722,-5475,-247
-MU,Mauritius,FALSE,-382,-122,-260
-MV,Maldives,FALSE,-104,-7,-97
+PL,Poland,TRUE,-6051,-5413,-638
+MU,Mauritius,FALSE,-311,-101,-210
+MV,Maldives,FALSE,-119,-12,-107
 MW,Malawi,FALSE,-11,-7,-4
-MX,Mexico,FALSE,199,504,-305
-MY,Malaysia,FALSE,-937,-356,-581
-MZ,Mozambique,FALSE,11,-67,78
-NA,Namibia,FALSE,-31,6,-37
-NC,New Caledonia,FALSE,18,-4,22
-NE,Niger,FALSE,19,4,15
+MX,Mexico,FALSE,21,417,-396
+MY,Malaysia,FALSE,-35,-659,624
+MZ,Mozambique,FALSE,-17,-91,74
+NA,Namibia,FALSE,32,11,21
+NC,New Caledonia,FALSE,9,5,4
+NE,Niger,FALSE,23,-1,24
 NF,Norfolk Island,FALSE,0,0,0
-NG,Nigeria,FALSE,733,-31,764
-NI,Nicaragua,FALSE,-35,-44,9
-PT,Portugal,TRUE,-2897,-1543,-1354
-NO,Norway,FALSE,-14619,-16337,1718
-NP,Nepal,FALSE,-9,-10,1
+NG,Nigeria,FALSE,-123,-789,666
+NI,Nicaragua,FALSE,-32,-36,4
+PT,Portugal,TRUE,-3083,-1581,-1502
+NO,Norway,FALSE,-15189,-16532,1343
+NP,Nepal,FALSE,-4,-10,6
 NR,Nauru,FALSE,0,0,0
-NU,Niue Island,FALSE,2,2,0
-NZ,New Zealand,FALSE,197,13,184
-OM,Oman,FALSE,1841,1670,171
-PA,Panama,FALSE,138,93,45
-PE,Peru,FALSE,-305,-205,-100
-PF,French Polynesia,FALSE,117,2,115
-PG,Papua New Guinea,FALSE,34,-100,134
-PH,Philippines,FALSE,-211,37,-248
-PK,Pakistan,FALSE,-655,-546,-109
-RO,Romania,TRUE,-725,-768,43
+NU,Niue Island,FALSE,5,5,0
+NZ,New Zealand,FALSE,111,55,56
+OM,Oman,FALSE,1393,905,488
+PA,Panama,FALSE,173,141,32
+PE,Peru,FALSE,-343,-261,-82
+PF,French Polynesia,FALSE,148,0,148
+PG,Papua New Guinea,FALSE,13,-78,91
+PH,Philippines,FALSE,-307,-18,-289
+PK,Pakistan,FALSE,-715,-509,-206
+RO,Romania,TRUE,-1400,-1113,-287
 PN,Pitcairn,FALSE,0,0,0
-PS,Occupied Palestinian Territory,FALSE,13,3,10
-SI,Slovenia,TRUE,-125,-172,47
-PW,Palau,FALSE,1,0,1
-PY,Paraguay,FALSE,19,16,3
-QA,Qatar,FALSE,594,-130,724
-ES,Spain,TRUE,-13113,-6068,-7045
-RS,Serbia,FALSE,-67,-122,55
-RU,Russia,FALSE,-481,-2669,2188
-RW,Rwanda,FALSE,10,2,8
-SA,Saudi Arabia,FALSE,3217,1809,1408
-SB,Solomon Islands,FALSE,54,0,54
-SC,Seychelles,FALSE,-51,-57,6
-SD,Sudan,FALSE,48,56,-8
-SE,Sweden,TRUE,1161,-1734,2895
-SG,Singapore,FALSE,3255,2048,1207
-SH,St. Helena,FALSE,9,5,4
-CH,Switzerland,TRUE,8300,-379,8679
-SK,Slovakia,TRUE,-1794,-1981,187
-SL,Sierra Leone,FALSE,12,1,11
-SM,San Marino,FALSE,2,0,2
-SN,Senegal,FALSE,268,188,80
-SO,Somalia,FALSE,36,2,34
-SR,Suriname,FALSE,11,7,4
-SS,South Sudan,FALSE,39,0,39
-ST,Sao Tome & Principe,FALSE,3,3,0
-SV,El Salvador,FALSE,9,5,4
-SX,Sint Maarten,FALSE,6,2,4
-SY,Syria,FALSE,4,-2,6
-SZ,Swaziland,FALSE,-17,-2,-15
-TC,Turks & Caicos Islands,FALSE,3,0,3
-TD,Chad,FALSE,15,3,12
+PS,Occupied Palestinian Territory,FALSE,1,4,-3
+SI,Slovenia,TRUE,-54,-115,61
+PW,Palau,FALSE,0,0,0
+PY,Paraguay,FALSE,8,11,-3
+QA,Qatar,FALSE,1745,980,765
+ES,Spain,TRUE,-14652,-6225,-8427
+RS,Serbia,FALSE,-15,-85,70
+RU,Russia,FALSE,-3808,-5709,1901
+RW,Rwanda,FALSE,12,5,7
+SA,Saudi Arabia,FALSE,2297,393,1904
+SB,Solomon Islands,FALSE,60,0,60
+SC,Seychelles,FALSE,-2,-17,15
+SD,Sudan,FALSE,121,49,72
+SE,Sweden,TRUE,44,-1547,1591
+SG,Singapore,FALSE,4231,2814,1417
+SH,St. Helena,FALSE,13,9,4
+CH,Switzerland,TRUE,8638,776,7862
+SK,Slovakia,TRUE,-1752,-1783,31
+SL,Sierra Leone,FALSE,17,5,12
+SM,San Marino,FALSE,11,4,7
+SN,Senegal,FALSE,236,154,82
+SO,Somalia,FALSE,8,2,6
+SR,Suriname,FALSE,2,3,-1
+SS,South Sudan,FALSE,3,0,3
+ST,Sao Tome & Principe,FALSE,0,0,0
+SV,El Salvador,FALSE,10,7,3
+SX,Sint Maarten,FALSE,-6,0,-6
+SY,Syria,FALSE,33,1,32
+SZ,Swaziland,FALSE,-43,-7,-36
+TC,Turks & Caicos Islands,FALSE,4,0,4
+TD,Chad,FALSE,21,17,4
 TF,French Southern Territories,FALSE,0,0,0
-TG,Togo,FALSE,190,30,160
-TH,Thailand,FALSE,-2469,-1760,-709
-TJ,Tajikistan,FALSE,13,0,13
+TG,Togo,FALSE,101,59,42
+TH,Thailand,FALSE,-1819,-1486,-333
+TJ,Tajikistan,FALSE,-1,2,-3
 TK,Tokelau Islands,FALSE,0,0,0
-TL,East Timor,FALSE,3,0,3
-TM,Turkmenistan,FALSE,37,25,12
-TN,Tunisia,FALSE,29,-12,41
-TO,Tonga,FALSE,9,1,8
-TR,Turkey,FALSE,-2819,-2915,96
-TT,Trinidad & Tobago,FALSE,-15,-57,42
-TV,Tuvalu,FALSE,0,0,0
-TW,Taiwan,FALSE,-394,-2267,1873
-TZ,Tanzania,FALSE,46,34,12
-UA,Ukraine,FALSE,87,-8,95
-UG,Uganda,FALSE,-5,10,-15
-UM,US Minor Outlying Islands,FALSE,17,0,17
-US,United States inc Puerto Rico,FALSE,38272,11640,26632
-UY,Uruguay,FALSE,159,126,33
-UZ,Uzbekistan,FALSE,80,23,57
-VA,Vatican City,FALSE,22,1,21
-VC,St Vincent,FALSE,3,0,3
-VE,Venezuela,FALSE,-49,-55,6
-VG,British Virgin Islands,FALSE,463,14,449
-VI,US Virgin Islands,FALSE,9,3,6
-VN,Vietnam,FALSE,-3454,-3630,176
-VU,Vanuatu,FALSE,4,0,4
+TL,East Timor,FALSE,0,0,0
+TM,Turkmenistan,FALSE,19,15,4
+TN,Tunisia,FALSE,20,4,16
+TO,Tonga,FALSE,2,0,2
+TR,Turkey,FALSE,-4762,-4355,-407
+TT,Trinidad & Tobago,FALSE,-13,-48,35
+TV,Tuvalu,FALSE,2,0,2
+TW,Taiwan,FALSE,-1031,-2144,1113
+TZ,Tanzania,FALSE,47,61,-14
+UA,Ukraine,FALSE,75,-10,85
+UG,Uganda,FALSE,-32,2,-34
+UM,US Minor Outlying Islands,FALSE,25,0,25
+US,United States inc Puerto Rico,FALSE,45789,12971,32818
+UY,Uruguay,FALSE,72,73,-1
+UZ,Uzbekistan,FALSE,48,24,24
+VA,Vatican City,FALSE,3,1,2
+VC,St Vincent,FALSE,7,2,5
+VE,Venezuela,FALSE,-17,-20,3
+VG,British Virgin Islands,FALSE,490,10,480
+VI,US Virgin Islands,FALSE,6,0,6
+VN,Vietnam,FALSE,-3699,-3755,56
+VU,Vanuatu,FALSE,27,0,27
 WF,Wallis & Futuna,FALSE,0,0,0
-WS,Samoa,FALSE,19,14,5
-XK,Kosovo,FALSE,0,0,0
-YE,Yemen,FALSE,34,28,6
-ZA,South Africa,FALSE,359,-487,846
-ZM,Zambia,FALSE,67,23,44
-ZW,Zimbabwe,FALSE,145,-52,197
+WS,Samoa,FALSE,3,0,3
+XK,Kosovo,FALSE,1,1,0
+YE,Yemen,FALSE,41,25,16
+ZA,South Africa,FALSE,-356,-1250,894
+ZM,Zambia,FALSE,84,48,36
+ZW,Zimbabwe,FALSE,147,-38,185
