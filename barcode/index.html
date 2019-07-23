@@ -1582,9 +1582,14 @@ function highlight(chartType, selectedID, selectedName) {//console.log("ƒ highl
 			if(selectedName !=="United Kingdom"){
 					selected = d3.select(this).select(".selectedareaText")
 						.attr("x", function(){ 										// plus US
-												if (xPosition[i] > barchartWidth*3/4) {
-														return (xPosition[i]) - barchartWidth/2; }
+												if (xPosition[i] > barchartWidth*1/2) {
+														return (xPosition[i]) - 8; }
 												 else { return (+xPosition[i]) + 8; }
+						})
+						.attr("text-anchor", function(){ 										// plus US
+												if (xPosition[i] > barchartWidth*1/2) {
+														return "end" }
+												 else { return "start"}
 						})
 						.attr("y",-7)
 						.style("display", "block");
